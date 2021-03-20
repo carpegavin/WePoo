@@ -5,6 +5,8 @@
 * Poopy Pee Pee Poo
 <br>
 
+## `Technologies used`
+
 ### Please enjoy the deployed application [HERE](link here)
 <br>
 
