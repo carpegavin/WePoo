@@ -2,7 +2,7 @@
 
 ## `Description`
 
-* Tossing a frisbee or whacking that shuttlecock in the park is difficult enough without having to p%ss like a racehorse. Don't let the game end, just put it on hold and use our clean as a bidet app to quickly locate the nearest toilet using Google Maps. If you're as shy as sasquatch, we got you. When your fluids are movin', play music through our app to disguise the echoey chaos. Finally, did you wanna barf out your nose 'cause the bathroom was so gross or did you feel like eating a charcutery plate off the seat it was so clean, let others know with the review function.  
+* Tossing a frisbee or whacking that shuttlecock in the park is difficult enough without having to p%ss like a racehorse. Don't let the game end, just put it on hold and use our clean as a bidet app to quickly locate the nearest toilet using Google Maps. If you're as shy as sasquatch, we got you. When your fluids are movin', play music through our app to disguise the echoey chaos. Finally, did you wanna barf out your nose 'cause the bathroom was so gross or did you feel like eating a charcuterie plate off the seat it was so clean, let others know with the review function.  
 <br>
 
 ## `Technologies used`
