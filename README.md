@@ -7,6 +7,22 @@
 
 ## `Technologies used`
 
+* React.js
+* Node.JS
+* MongoDB
+* NoSQL
+* Javascript
+* HTML
+* CSS
+* Heroku
+* GIT
+* GitHub
+* .ENV
+* Google Auth
+* Rapid API (and others)
+* Postman
+
+
 ### Please enjoy the deployed application [HERE](link here)
 <br>
 
