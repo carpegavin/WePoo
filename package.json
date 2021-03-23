@@ -24,6 +24,7 @@
     "express": "^4.16.3",
     "google-maps-react": "^2.0.6",
     "if-env": "^1.0.4",
-    "mongoose": "^5.3.16"
+    "mongoose": "^5.3.16",
+    "react-player": "^2.9.0"
   }
 }
