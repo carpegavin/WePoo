@@ -1,17 +1,14 @@
-function musicApp() {
-    return (
-      <div>
-        <h3>Cover the Poo Noise - <a href="https://www.cluemediator.com">Clue Mediator</a></h3>
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
-          width="400px"
-          height="50px"
-          playing={false}
-          controls={true}
-          loop={true}
-        />
-      </div>
-    );
+class ResponsivePlayer extends Component {
+    render () {
+      return (
+        <div className='player-wrapper'>
+          <ReactPlayer
+            className='react-player'
+            url='https://www.youtube.com/watch?v=fJ9rUzIMcZQ'
+            width='100%'
+            height='100%'
+          />
+        </div>
+      )
+    }
   }
-   
-  export default musicApp;
