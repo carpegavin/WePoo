@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 
-// import CurrentLocation from './components/MapContainer';
+import CurrentLocation from './components/MapContainer';
 
 export class MapContainer extends Component {
   state = {
