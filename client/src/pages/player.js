@@ -1,12 +1,15 @@
-import ReactPlayer from "../components/MusicPlayer";
+import ResponsivePlayer from "../components/MusicPlayer";
+import Container from "../components/Container";
+import React from "react";
 
 function play() {
-    return (
+  return (
+    <div>
       <Container fluid>
-        <ReactPlayer/>
+        <ResponsivePlayer />
       </Container>
-    );
-  }
-  
-  export default play;
-  
+    </div>
+  );
+}
+
+export default play;

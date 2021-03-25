@@ -1,17 +1,22 @@
-class ResponsivePlayer extends Component {
-    render () {
-      return (
-        <div className='player-wrapper'>
-          <ReactPlayer
-            className='react-player'
-            url='https://www.youtube.com/playlist?list=PLeVSaoDO5bjYYxdHtKhBSpK9RvjMKWAWy'
-            width='100%'
-            height='100%'
-          />
-        </div>
-      )
-    }
+import React from "react";
+import ReactPlayer from "react-player";
+
+class ResponsivePlayer extends React.Component {
+  render() {
+    return (
+      <div className="player-wrapper">
+        <ReactPlayer
+          className="react-player"
+          url="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+          width="100%"
+          height="100%"
+        />
+      </div>
+    );
   }
+}
+
+export default ResponsivePlayer;
 
 //--------------------------non-responsive below--------------------------
 //   function App() {
@@ -28,5 +33,5 @@ class ResponsivePlayer extends Component {
 //       </div>
 //     );
 //   }
-   
+
 //   export default App;
