@@ -19,7 +19,7 @@ export class CurrentLocation extends React.Component {
     },
     centerAroundCurrentLocation: false,
     visible: true
-  }
+  } 
 
   constructor(props) {
     super(props);
