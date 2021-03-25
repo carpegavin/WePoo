@@ -5,6 +5,7 @@ import Play from "./pages/player";
 import Container from "./components/Container";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import ReactPlayer from "react-player";
+// import Play from "./pages/player"
 
 
 function App() {
