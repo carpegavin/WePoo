@@ -6,7 +6,6 @@ function play() {
   return (
     <div>
       <Container fluid>
-        <h1>TEST</h1>
         <MusicPlayer />
       </Container>
     </div>
