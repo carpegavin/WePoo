@@ -7,13 +7,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
 
-
 function App() {
   return (
     <Router>
       <div className="App">
         <Container>
-          <Route exact path="./pages/player" function={Play} />
+          <Route exact path="./pages/player" component={Play} />
         </Container>
       </div>
     </Router>
@@ -21,11 +20,6 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
 
 // class App extends Component {
 //   render() {
@@ -37,10 +31,6 @@ export default App;
 //   }
 // }
 // export default App;
-
-
-
-
 
 // import CurrentLocation from './components/MapContainer';
 

@@ -5,8 +5,8 @@ import Container from "../components/Container";
 function play() {
   return (
     <div>
-      <h1>TEST</h1>
       <Container fluid>
+        <h1>TEST</h1>
         <MusicPlayer />
       </Container>
     </div>

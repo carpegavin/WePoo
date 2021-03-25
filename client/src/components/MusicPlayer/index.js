@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactPlayer from "react-player/lazy";
 import "./style.css";
 
-class ResponsivePlayer extends Component {
+export class ResponsivePlayer extends Component {
   render() {
     return (
       <div className="player-wrapper">
