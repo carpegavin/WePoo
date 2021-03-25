@@ -8,4 +8,4 @@ function Container(props) {
   );
 }
 
-export default Container
+export default Container;

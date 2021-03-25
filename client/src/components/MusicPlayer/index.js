@@ -1,13 +1,15 @@
-import React from "react";
-import ReactPlayer from "react-player";
+import React, { Component } from "react";
+import ReactPlayer from "react-player/lazy";
+import "./style.css";
 
-class ResponsivePlayer extends React.Component {
+class ResponsivePlayer extends Component {
   render() {
     return (
       <div className="player-wrapper">
-        <ReactPlayer
+      <h1>Test Test</h1>  
+      <ReactPlayer
           className="react-player"
-          url="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+          url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
           width="100%"
           height="100%"
         />
@@ -16,7 +18,18 @@ class ResponsivePlayer extends React.Component {
   }
 }
 
+
+
 export default ResponsivePlayer;
+
+
+
+
+
+
+
+
+
 
 //--------------------------non-responsive below--------------------------
 //   function App() {

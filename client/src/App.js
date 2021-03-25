@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 // import ReactPlayer from "react-player/youtube";
 import Play from "./pages/player";
@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Container>
           <Route exact path="./pages/player" function={Play} />
         </Container>
