@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 const mapStyles = {
@@ -11,7 +11,7 @@ const mapStyles = {
 
 export class CurrentLocation extends React.Component {
   // ...
-  CurrentLocation.defaultProps = {
+  static defaultProps = {
     zoom: 14,
     initialCenter: {
       lat: -1.2884,
