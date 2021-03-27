@@ -107,7 +107,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 75vh;
       position: absolute;
       top: 80px;
       left: -100%;
@@ -151,15 +151,7 @@
       /* transform: translate(25%, 50%); */
     }
   
-    .menu-icon {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
+
     /* #nameHead {
       margin-right: 135px;
       margin-top: 20px;
@@ -176,6 +168,6 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 120px;
+      height: 60px;
     }
   }
