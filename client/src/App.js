@@ -1,10 +1,10 @@
 import React from "react";
 // import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 // import ReactPlayer from "react-player/youtube";
-import Player from "./components/pages/Player"
-import Review from "./components/pages/Review"
-import Map from "./components/pages/Map"
-import Home from "./components/pages/Home/index"
+import Player from "./pages/Player"
+import Review from "./pages/Review"
+import Map from "./pages/Map"
+import Home from "./pages/Home"
 // import Container from "./components/Container";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import ReactPlayer from "react-player";
