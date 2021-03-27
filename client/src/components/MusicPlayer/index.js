@@ -6,8 +6,7 @@ export class ResponsivePlayer extends Component {
   render() {
     return (
       <div className="player-wrapper">
-      <h1>Test Test</h1>  
-      <ReactPlayer
+       <ReactPlayer
           className="react-player"
           url="https://music.youtube.com/playlist?list=PLeVSaoDO5bjYYxdHtKhBSpK9RvjMKWAWy"
           width="100%"
