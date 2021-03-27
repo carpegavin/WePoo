@@ -1,32 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from "../../Navbar"
-import './Home.css';
+import './Navbar.css';
 
 
-function Home() {
+function Navbar() {
 
   return (
-<<<<<<< HEAD
     <>
         <nav className='navbar'>
           <div className='navbar-container container'>
-            <Link to='/' className='navbar-logo' id="nameHead" onClick={closeMobileMenu}>
+            <Link to='/' className='navbar-logo' id="nameHead" >
               
               WePoo
-                          </Link>
+            </Link>
 
             <ul className={ 'nav-menu active' }>
               <li className='nav-item'>
-                <Link to='/map' className='nav-links' onClick={closeMobileMenu}>
-                  Gotta Go
+                <Link to='/map' className='nav-links' >
+                  Go
                 </Link>
               </li>
               <li className='nav-item'>
                 <Link
                   to='/player'
                   className='nav-links'
-                  onClick={closeMobileMenu}
                 >
                   Going
                 </Link>
@@ -35,17 +32,16 @@ function Home() {
                 <Link
                   to='/review'
                   className='nav-links'
-                  onClick={closeMobileMenu}
                 >
                   Gone
                 </Link>
               </li>
-=======
-    <Navbar/>
-    
->>>>>>> b6e9ce5e6493b86c37dbe3117e04cf8f852e29c1
 
+            </ul>
+          </div>
+        </nav>
+    </>
   );
 }
 
-export default Home;
+export default Navbar;
