@@ -21,12 +21,12 @@ function Footer(){
     
 </li>
 <li >
-    <Link to='/maps' >
+    <Link to='/map' >
     <SiGooglemaps size={50}/>
 
     </Link>
 </li>
-<li className = "icons">
+<li >
     <Link to='/review' >
     <BsNewspaper size={50}/>
 
