@@ -21,8 +21,8 @@ import {
   ComboboxOption
 } from "@reach/combobox"
 
-import Search from "../../Search"
-import Locate from "../../Locate";
+import Search from "../../components/Search"
+import Locate from "../../components/Locate";
 
 const libraries = ["places"]
 const mapContainerStyle = {
