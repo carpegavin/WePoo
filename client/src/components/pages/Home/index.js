@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from "../../Navbar"
+import Footer from "../../Footer"
 import './Home.css';
 
 
 function Home() {
 
   return (
-<<<<<<< HEAD
+
+
     <>
         <nav className='navbar'>
           <div className='navbar-container container'>
@@ -40,10 +41,11 @@ function Home() {
                   Gone
                 </Link>
               </li>
-=======
+
     <Navbar/>
+    <Footer/>
     
->>>>>>> b6e9ce5e6493b86c37dbe3117e04cf8f852e29c1
+    </>
 
   );
 }

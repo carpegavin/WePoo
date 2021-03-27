@@ -1,0 +1,27 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8rem; 
+
+}
+
+ul{
+    background-color: #28a187 ;
+}
+
+li {
+    list-style: none;
+}
+
+.row {
+    display:inline;      
+
+
+}
+
+.rowItems {
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+}

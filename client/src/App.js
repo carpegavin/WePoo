@@ -2,10 +2,10 @@ import React from "react";
 // import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 // import ReactPlayer from "react-player/youtube";
 import Player from "./components/pages/Player"
-// import Review from "./components/pages/Review"
+import Review from "./components/pages/Review"
 import Map from "./components/pages/Map"
 import Home from "./components/pages/Home/index"
-import Container from "./components/Container";
+// import Container from "./components/Container";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
@@ -14,12 +14,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Container>
+        {/* <Container> */}
           <Route path='/' exact component={Home} />
           <Route path='/map' exact component={Map} />
-          <Route path='./player' exact component={Player} />
-          {/* <Route path='/review' exact component={Review} /> */}
-        </Container>
+          <Route path='/player' exact component={Player} />
+          <Route path='/review' exact component={Review} />
+        {/* </Container> */}
       </div>
     </Router>
   );
