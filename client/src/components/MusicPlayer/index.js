@@ -9,7 +9,7 @@ export class ResponsivePlayer extends Component {
       <h1>Test Test</h1>  
       <ReactPlayer
           className="react-player"
-          url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+          url="https://music.youtube.com/playlist?list=PLeVSaoDO5bjYYxdHtKhBSpK9RvjMKWAWy"
           width="100%"
           height="100%"
         />
