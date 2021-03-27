@@ -17,7 +17,7 @@ function App() {
         <Container>
           <Route path='/' exact component={Home} />
           <Route path='/map' exact component={Map} />
-          <Route path='/player' exact component={Player} />
+          <Route path='./player' exact component={Player} />
           {/* <Route path='/review' exact component={Review} /> */}
         </Container>
       </div>

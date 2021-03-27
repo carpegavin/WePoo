@@ -41,7 +41,7 @@ function Navbar() {
             <ul className={ 'nav-menu active' }>
               <li className='nav-item'>
                 <Link to='/map' className='nav-links' onClick={closeMobileMenu}>
-                  Go
+                  Gotta Go
                 </Link>
               </li>
               <li className='nav-item'>
