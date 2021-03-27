@@ -1,7 +1,10 @@
 import React from "react";
 // import { GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 // import ReactPlayer from "react-player/youtube";
-import play from "./pages/player";
+import Player from "./components/pages/Player"
+// import Review from "./components/pages/Review"
+import Map from "./components/pages/Map"
+import Home from "./components/pages/Home/index"
 import Container from "./components/Container";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import ReactPlayer from "react-player";
@@ -12,7 +15,10 @@ function App() {
     <Router>
       <div className="App">
         <Container>
-          <Route exact path="./pages/player" component={play} />
+          <Route path='/' exact component={Home} />
+          <Route path='/map' exact component={Map} />
+          <Route path='/player' exact component={Player} />
+          {/* <Route path='/review' exact component={Review} /> */}
         </Container>
       </div>
     </Router>
