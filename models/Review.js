@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
 location: {
-     type: { type: String },
+     type:  String ,
       coordinates: [Number],
       required: "Location is required"
 },
