@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { Navbar} from 'react-bootstrap';
 
-
-function Navbar() {
+function BottomNavbar() {
 
   return (
     <>
-        <nav className='navbar'>
+
+      <Navbar bg="dark">
+          <Navbar.Brand href="#home">
+            <img
+              src="/logo.svg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+        </Navbar>
+        {/* <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' id="nameHead" >
               
@@ -39,9 +51,9 @@ function Navbar() {
 
             </ul>
           </div>
-        </nav>
+        </nav> */}
     </>
   );
 }
 
-export default Navbar;
+export default BottomNavbar;

@@ -11,6 +11,7 @@
     "date-fns": "^2.19.0",
     "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.13.1",
     "react-icons": "^4.2.0",
     "react-player": "^2.9.0",
