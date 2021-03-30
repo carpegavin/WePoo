@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/review");
   },
   // Gets the book with the given id
-  getReviews: function(id) {
+  getReview: function(id) {
     return axios.get("/api/review/" + id);
   },
   // Deletes the book with the given id
