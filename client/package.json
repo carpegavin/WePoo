@@ -4,13 +4,20 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@reach/combobox": "^0.14.0",
+    "@react-google-maps/api": "^2.1.1",
     "axios": "^0.18.0",
+    "bootstrap": "^4.6.0",
+    "date-fns": "^2.19.0",
+    "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.13.1",
     "react-icons": "^4.2.0",
     "react-player": "^2.9.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "use-places-autocomplete": "^1.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
