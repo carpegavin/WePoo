@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
-  location: {
+location: {
      type: { type: String },
       coordinates: [Number],
       required: "Location is required"
 },
   
-  rating: {
+rating: {
       type: Number,
       validate: [({ rating }) => rating <= 5, "Rating 1-5"],
       required: "Rating is required"
