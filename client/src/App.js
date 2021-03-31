@@ -32,7 +32,7 @@ function App() {
           <Route exact path="/review">
             <Review />
           </Route>
-
+ 
         </Switch>
         <Footer />
       </div>
