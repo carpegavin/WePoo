@@ -10,9 +10,6 @@ function Home() {
 
 
     <>
-
-    <Navbar/>
-    <Footer/>
     
     </>
 

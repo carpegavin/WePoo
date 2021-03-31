@@ -6,22 +6,49 @@ import Review from "./pages/Review"
 import Map from "./pages/Map"
 import Home from "./pages/Home"
 // import Container from "./components/Container";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Footer from "./components/Footer";
+import { Navbar } from "react-bootstrap";
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
 
 function App() {
   return (
+
+
     <Router>
-      <div className="App">
-        {/* <Container> */}
-          <Route path='/' exact component={Home} />
-          <Route path='/map' exact component={Map} />
-          <Route path='/player' exact component={Player} />
-          <Route path='/review' exact component={Review} />
-        {/* </Container> */}
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path={["/"]}>
+            <Home />
+          </Route>
+          <Route exact path="/map">
+            <Map />
+          </Route>
+          <Route exact path="/player">
+            <Player />
+          </Route>
+          <Route exact path="/review">
+            <Review />
+          </Route>
+ 
+        </Switch>
+        <Footer />
       </div>
     </Router>
+
+
+    // <Router>
+    //   <div className="App">
+    //     {/* <Container> */}
+    //       <Route path='/' exact component={Home} />
+    //       <Route path='/map' exact component={Map} />
+    //       <Route path='/player' exact component={Player} />
+    //       <Route path='/review' exact component={Review} />
+    //     {/* </Container> */}
+    //   </div>
+    // </Router>
   );
 }
 
