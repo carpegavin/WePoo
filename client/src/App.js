@@ -7,7 +7,6 @@ import Map from "./pages/Map"
 import Home from "./pages/Home"
 // import Container from "./components/Container";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Footer from "./components/Footer";
 import { Navbar } from "react-bootstrap";
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
@@ -18,7 +17,7 @@ function App() {
 
     <Router>
       <div>
-        <Navbar />
+        {/* <Navbar /> needs to be top logo*/}
         <Switch>
           <Route exact path={["/"]}>
             <Home />
@@ -34,7 +33,7 @@ function App() {
           </Route>
  
         </Switch>
-        <Footer />
+        <Navbar />
       </div>
     </Router>
 

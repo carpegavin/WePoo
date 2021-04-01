@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import { Navbar } from 'react-bootstrap';
 import './Home.css';
 
 
@@ -10,7 +9,7 @@ function Home() {
 
 
     <>
-    
+    <Navbar />
     </>
 
   );
