@@ -1,57 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { Navbar} from 'react-bootstrap';
+import { Navbar,Row, Container, Col} from 'react-bootstrap';
 
 function BottomNavbar() {
 
   return (
     <>
-
-      <Navbar bg="dark">
+      <Navbar fixed="bottom" className="justify-content-center" >
           <Navbar.Brand href="#home">
-            <img
-              src="/logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
+            <Container className="justify-content-center">
+              <Row>
+                <Col xs>
+                  <Link to ='/'>
+                  <img
+                    src="/assets/home.png"
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-top"
+                    alt=""
+                  />
+                  </Link>
+                </Col>
+                <Col xs>
+                  <Link to ='/map'>
+                  <img
+                    src="/assets/maps.png"
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-top"
+                    alt=""
+                  />
+                  </Link>
+                </Col>
+                <Col>
+                  <Link to ='/player'>
+                  <img
+                    src="/assets/review.png"
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-top"
+                    alt=""
+                  />
+                  </Link>
+                </Col>
+              </Row>
+            </Container>
           </Navbar.Brand>
         </Navbar>
-        {/* <nav className='navbar'>
-          <div className='navbar-container container'>
-            <Link to='/' className='navbar-logo' id="nameHead" >
-              
-              WePoo
-            </Link>
-
-            <ul className={ 'nav-menu active' }>
-              <li className='nav-item'>
-                <Link to='/map' className='nav-links' >
-                  Go
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  to='/player'
-                  className='nav-links'
-                >
-                  Going
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link
-                  to='/review'
-                  className='nav-links'
-                >
-                  Gone
-                </Link>
-              </li>
-
-            </ul>
-          </div>
-        </nav> */}
     </>
   );
 }
