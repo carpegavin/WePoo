@@ -48,8 +48,33 @@ function Map() {
     libraries
   })
 
+
   const [markers, setMarkers ] = useState([]);
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState(null);
+  const [info,setInfo] = useState(null);
+  const [amenities,setAmenities] = useState(null);
+
+  function setAmenity(data){
+    let array=[];
+    if(info){
+      if(info.handicapAccess){
+        array.push("Handicap Accessible")
+      };
+      if(info.babyChangingTable){
+        array.push("Baby Changing Table")
+      };
+      if(info.singlePersonBath){
+        array.push("Single Person Bathroom")
+      };
+      if(info.feminineHygieneProducts){
+        array.push("Feminine Hygiene Available")
+      };
+      if(info.public){
+        array.push("Public Access")
+      }
+    }
+    setAmenities(array.join(", "));
+  }
 
   function loadMarkers(){
     API.getReviews()
@@ -66,6 +91,15 @@ function Map() {
         setMarkers(markerArray)
       }
       )
+      .catch(error=>console.log(error))
+  }
+
+  function loadReviewInfo(id){
+    API.getReview(id)
+      .then(res=>
+        {setInfo(res.data);
+        setAmenities(res.data.review)}
+        )
       .catch(error=>console.log(error))
   }
 
@@ -115,6 +149,8 @@ function Map() {
             position={{lat: marker.lat, lng : marker.lng}}
             onClick={()=> {
               setSelected(marker);
+              let id = marker.lat.toString()+marker.lng.toString();
+              loadReviewInfo(id)
             }}
             // icon={{
             //   url: "./toiletpaper.svg",
@@ -128,15 +164,23 @@ function Map() {
             {selected ? (<InfoWindow
               position={{lat:selected.lat,lng:selected.lng}}
               onCloseClick={()=> {
-                setSelected(null)
+                setSelected(null);
+                setInfo(null);
+                setAmenities(null)
               }}
             >
               <div>
-                <h2>Location</h2>
-                <p>Rating:</p>
-                <p>Amenities</p>
+                <h2>Place</h2>
+                <p>Rating: </p>
+                <p>Amenities:</p>
                 <button>Leave A Review</button>
               </div>
+              {/* <div>
+                <h2>{info.id}</h2>
+                <p>Rating: {info.review[0].rating}</p>
+                <p>Amenities{amenities}</p>
+                <button>Leave A Review</button>
+              </div> */}
             </InfoWindow>): null}
         </GoogleMap>
     </div>

@@ -9,7 +9,7 @@ router.route("/")
 // Matches with "/api/review/:id"
 router
   .route("/:id")
-  .get(reviewsController.findById)
+  .get(reviewsController.find)
   .put(reviewsController.update)
   .delete(reviewsController.remove);
 
