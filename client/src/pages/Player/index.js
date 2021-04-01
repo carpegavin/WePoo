@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MusicPlayer from "../../components/MusicPlayer";
+import "./Player.css";
 // import Container from "../components/Container";
 
 
