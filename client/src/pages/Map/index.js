@@ -53,8 +53,18 @@ function Map() {
 
   function loadMarkers(){
     API.getReviews()
-      .then( res => 
-       console.log(res.data)
+      .then( res => {
+        let markerArray=[]
+        res.data.forEach(item => {
+        let obj = {
+          lat:item.lat,
+          lng:item.lon,
+          time: new Date()
+        }
+        markerArray.push(obj)
+       })
+        setMarkers(markerArray)
+      }
       )
       .catch(error=>console.log(error))
   }
