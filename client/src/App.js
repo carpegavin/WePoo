@@ -8,6 +8,7 @@ import Home from "./pages/Home"
 // import Container from "./components/Container";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BottomNavbar from "./components/Navbar"
+import Logo from "./components/Logo"
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
 
@@ -17,7 +18,7 @@ function App() {
 
     <Router>
       <div>
-        {/* <Navbar /> needs to be top logo*/}
+        <Logo/>
         <Switch>
           <Route exact path={["/"]}>
             <Home />
