@@ -47,7 +47,7 @@ const options = {
 function Map() {
   
   const {isLoaded,loadError} = useLoadScript({
-    googleMapsApiKey: "AIzaSyBwThf1pyCifuBf91FFrWYPKmteu0dXY3E",/*process.env.REACT_APP_API_KEY,*/
+    googleMapsApiKey: process.env.REACT_APP_API_KEY,
     libraries
   })
 
