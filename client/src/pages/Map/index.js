@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import API from "../../utils/API"
 
 import {
   GoogleMap,
@@ -49,6 +50,18 @@ function Map() {
 
   const [markers, setMarkers ] = useState([]);
   const [selected, setSelected] = useState(null)
+
+  function loadMarkers(){
+    API.getReviews()
+      .then( res => 
+       console.log(res.data)
+      )
+      .catch(error=>console.log(error))
+  }
+
+  useEffect(()=>{
+    loadMarkers()
+  },[])
 
   const onMapClick = React.useCallback ((event)=> {
     setMarkers ( (current) => [
@@ -109,8 +122,10 @@ function Map() {
               }}
             >
               <div>
-                <h2>Bear Spotted</h2>
-                <p>Spotted {formatRelative(selected.time , new Date())}</p>
+                <h2>Location</h2>
+                <p>Rating:</p>
+                <p>Amenities</p>
+                <button>Leave A Review</button>
               </div>
             </InfoWindow>): null}
         </GoogleMap>
