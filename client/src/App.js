@@ -7,7 +7,7 @@ import Map from "./pages/Map"
 import Home from "./pages/Home"
 // import Container from "./components/Container";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navbar } from "react-bootstrap";
+import BottomNavbar from "./components/Navbar"
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
 
@@ -33,7 +33,7 @@ function App() {
           </Route>
  
         </Switch>
-        <Navbar />
+        <BottomNavbar />
       </div>
     </Router>
 
