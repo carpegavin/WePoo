@@ -3,16 +3,22 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
-location: {
-     type:  String ,
-      coordinates: [Number],
-      required: "Location is required"
+
+id: {
+  type: String,
+  required: "Must have an ID"
+},
+lat: {
+     type:  Number ,
+},
+
+lon: {
+  type: Number ,
 },
   
 rating: {
       type: Number,
       validate: [({ rating }) => rating <= 5, "Rating 1-5"],
-      required: "Rating is required"
 },
 
   handicapAccess: {
