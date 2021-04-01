@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API"
-
+import mapStyles from "./mapStyles.js"
 import {
   GoogleMap,
   useLoadScript,
@@ -27,8 +27,10 @@ import Locate from "../../components/Locate";
 
 const libraries = ["places"]
 const mapContainerStyle = {
-  width: "100vh",
-  height: "100vh",
+  marginTop: "5vh",
+  marginBottom: "5vh",
+  width: "100vw",
+  height: "80vh",
 }
 
 const center = {
@@ -37,8 +39,9 @@ const center = {
 }
 
 const options = {
+  style: mapStyles,
   disableDefaultUI: true ,
-  zoomControl : true
+  zoomControl : true,
 }
 
 function Map() {
@@ -98,7 +101,6 @@ function Map() {
 
   return (
     <div>
-      {/* <h2>WePoo</h2> */}
         <Locate panTo = {panTo}/>
         <Search panTo = {panTo}/>
         <GoogleMap
