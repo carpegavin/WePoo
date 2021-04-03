@@ -32,7 +32,6 @@ function App() {
           </Route>
           <Route exact path="/review">
             <Review />
-            <ReviewForm/>
           </Route>
  
         </Switch>

@@ -3,3 +3,9 @@ body {
     background-color: #28a187;
 
 }
+form {
+    width: 80vw;
+    height: 75vh;
+    justify-content: center;
+    font-size:125%;
+}

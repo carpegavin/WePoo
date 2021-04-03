@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
 // import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Navbar,Row, Container, Col, Form, Button} from 'react-bootstrap';
 import "./Review.css"
 
 function Review() {
@@ -20,7 +19,7 @@ function Review() {
 
   // Loads all books and sets them to books
   function loadReviews() {
-    API.getReviews()
+    API.getReview()
       .then(res => 
         setReviews(res.data)
       )
@@ -62,56 +61,78 @@ function Review() {
 
   // Need to find out how to pull lat and lon from user
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="rating"
-                placeholder="Rating (required) location should be taken from browser"
+      <Container className="justify-content-center">
+      <Form id ="form" className="justify-content-center" >
+        <Form.Group controlId="exampleForm.ControlInput1" className="justify-content-center">
+          <Form.Label>Location</Form.Label>
+          <Form.Control type="email" placeholder="name@example.com" />
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlSelect1">
+          <Form.Label>Rating</Form.Label>
+          <Form.Control as="select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </Form.Control>
+        </Form.Group>
+        <Form.Group controlId="formBasicCheckbox">
+          <Form.Label>Additional Info</Form.Label>
+          <Form.Row>
+            <Col>
+              <Form.Check 
+                type="switch"
+                id="Public-switch"
+                label="Public"
               />
-              <Input
-                onChange={handleInputChange}
-                name="futurecheckbox"
-                placeholder="futurecheckbox for boolean"
+            </Col>
+            <Col>
+              <Form.Check 
+                type="switch"
+                id="SA-switch"
+                label="Single Access"
               />
-              <Input
-                onChange={handleInputChange}
-                name="futurecheckbox2"
-                placeholder="futurecheckbox2 for boolean(required)"
+            </Col>
+          </Form.Row>
+          <Form.Row>
+            <Col>
+              <Form.Check 
+                type="switch"
+                id="FH-switch"
+                label="Feminine Hygene"
               />
-              <FormBtn
-                disabled={!(formObject.location && formObject.rating)}
-                onClick={handleFormSubmit}
-              >
-                Submit Review
-              </FormBtn>
-            </form>
-          </Col>
-          {/* <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {books.length ? (
-              <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col> */}
-        </Row>
+            </Col>
+            <Col>
+              <Form.Check 
+                type="switch"
+                id="HA-switch"
+                label="Handicap Accessible"
+              />
+           </Col>
+           <Col>
+              <Form.Check 
+                type="switch"
+                id="CT-switch"
+                label="Changing Table"
+              />
+            </Col>
+          </Form.Row>
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Tell us how it went</Form.Label>
+          <Form.Control as="textarea" rows={3} />
+        </Form.Group>
+      </Form>
       </Container>
+    );
+  }
+
+  export function FormBtn(props) {
+    return (
+      <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+        {props.children}
+      </button>
     );
   }
 
