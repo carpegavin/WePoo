@@ -8,6 +8,12 @@ id: {
   type: String,
   required: "Must have an ID"
 },
+
+locationName: {
+  type: String,
+  require: "Must have a location name"
+},
+
 lat: {
      type:  Number ,
 },
