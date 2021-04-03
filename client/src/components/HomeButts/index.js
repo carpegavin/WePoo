@@ -9,26 +9,20 @@ import { Row, Container, Col, Span, ButtonGroup } from "react-bootstrap";
 class HomeButton extends Component {
   render() {
     return (
-      <div className = "container" style={{textAlign:"center"}}>
-        <ButtonGroup vertical >
+      <div className="container" style={{ textAlign: "center" }}>
+        <ButtonGroup vertical>
           <div class="butts vertical-center">
-            <span>
-              <Button variant="warning" size="lg" onClick={() => "/map"}>
-                GOTTA GO
-              </Button>
-            </span>
+            <Button variant="warning" size="lg" onClick={() => "/map"}>
+              GOTTA GO
+            </Button>
 
-            <Col>
-              <Button variant="warning" size="lg" onClick={() => "/player"}>
-                GOING
-              </Button>
-            </Col>
+            <Button variant="warning" size="lg" onClick={() => "/player"}>
+              GOING
+            </Button>
 
-            <Col>
-              <Button variant="warning" size="lg" onClick={() => "/review"}>
-                GONE
-              </Button>
-            </Col>
+            <Button variant="warning" size="lg" onClick={() => "/review"}>
+              GONE
+            </Button>
           </div>
         </ButtonGroup>
       </div>
