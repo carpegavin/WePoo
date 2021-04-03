@@ -9,7 +9,6 @@ import Home from "./pages/Home"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BottomNavbar from "./components/Navbar"
 import Logo from "./components/Logo"
-import ReviewForm from "./components/Form";
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
 
