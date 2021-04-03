@@ -1,0 +1,38 @@
+/* Button{
+    display: flex;
+    justify-content: center;
+    width:80%;
+    background-color: orange!important;
+    margin:5px!important;
+    height: 8rem;
+    border-radius: 25px !important;
+    padding: 1rem !important;
+    font-size:30px !important;
+    font-weight: bold !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+     
+    
+
+  }
+
+  .group{
+      margin-top: 8rem;
+      margin-left:3.4rem;
+  }
+
+  .one{
+      padding:.5rem;
+  }
+
+  .two{
+      padding:.5rem;
+  }
+
+  .three{
+      padding:.5rem;
+  } */
+
+
+  .all{
+      margin-top:10rem;
+  }

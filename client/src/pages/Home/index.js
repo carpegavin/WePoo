@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar } from 'react-bootstrap';
 import './Home.css';
+import HomeButton from '../../components/HomeButts'
 
 
 function Home() {
 
   return (
-
-
-    <>
-    </>
-
+    <div>
+    <HomeButton />
+    </div>
   );
 }
 
