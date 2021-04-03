@@ -31,6 +31,7 @@ function ReviewForm(){
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label>Rating</Form.Label>
+        
           <Form.Control as="select">
             <option>1</option>
             <option>2</option>
