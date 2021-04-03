@@ -9,22 +9,22 @@ class HomeButton extends Component {
   render() {
     return (
       <>
-      <div class="all">
-        <div class="container w-100 h-100">
+      <grid class="all">
+        <row className="text-center">
           <div class="row align-items-center h-100">
-            <div class="col-md-6">
-              <Button variant="warning" size="lg" onClick={() => "./map"}>
+            <div class="col-md-6 col-md-offset-3">
+              <Button variant="warning" size="lg" onClick={() => "/map"}>
                 GOTTA GO
               </Button>
             </div>
 
-            <div class="two">
+            <div class="col-md-6 col-md-offset-3">
               <Button variant="warning" size="lg" onClick={() => "/player"}>
                 GOING
               </Button>
             </div>
 
-            <div class="three">
+            <div class="col-md-6 col-md-offset-3">
               <Button
                 fixed="center"
                 variant="warning"
@@ -35,8 +35,8 @@ class HomeButton extends Component {
               </Button>
             </div>
           </div>
-        </div>
-      </div>
+        </row>
+      </grid>
       </>
     );
   }
