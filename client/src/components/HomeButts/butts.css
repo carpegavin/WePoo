@@ -15,7 +15,7 @@ Button {
     position: relative;
     height: 8rem;
     width: 15rem !important;
-    padding: 4px !important;
+    
     font-family: bold !important;
     border-radius: 20px !important;
     font-size: 3rem !important;
