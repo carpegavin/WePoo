@@ -3,18 +3,18 @@
     min-height: 100vh; 
     /* min-width: 100%;
     min-width: 100vh; */
-    display: flex;
+    
     align-items: center;
 
   }
 
 Button {
-    width: 10rem;
+    
     display:flex;
     align-items: center;
     position: relative;
     height: 10rem;
-    width: 20rem;
+    width: 30rem !important;
     padding: 1rem;
     font-family: bold !important;
     border-radius: 20px !important;
