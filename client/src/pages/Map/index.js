@@ -7,20 +7,6 @@ import {
   Marker,
   InfoWindow
 } from "@react-google-maps/api";
-import { formatRelative} from "date-fns";
-
-import usePlacesAutocomplete, {
-  getGeocode,
-  getLatLng
-} from "use-places-autocomplete";
-
-import {
-  Combobox,
-  ComboboxIput,
-  ComboboxPopover,
-  ComboboxList,
-  ComboboxOption
-} from "@reach/combobox"
 
 import Search from "../../components/Search"
 import Locate from "../../components/Locate";
@@ -47,32 +33,32 @@ const options = {
 function Map() {
   
   const {isLoaded,loadError} = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_APIKEY,
     libraries
   })
 
 
   const [markers, setMarkers ] = useState([]);
   const [selected, setSelected] = useState(null);
-  const [info,setInfo] = useState(null);
-  const [amenities,setAmenities] = useState(null);
+  const [info, setInfo] = useState(null);
+  const [amenities, setAmenities] = useState(null);
 
   function setAmenity(data){
     let array=[];
-    if(info){
-      if(info.handicapAccess){
+    if(data){
+      if(data.handicapAccess){
         array.push("Handicap Accessible")
       };
-      if(info.babyChangingTable){
+      if(data.babyChangingTable){
         array.push("Baby Changing Table")
       };
-      if(info.singlePersonBath){
+      if(data.singlePersonBath){
         array.push("Single Person Bathroom")
       };
-      if(info.feminineHygieneProducts){
+      if(data.feminineHygieneProducts){
         array.push("Feminine Hygiene Available")
       };
-      if(info.public){
+      if(data.public){
         array.push("Public Access")
       }
     }
@@ -100,9 +86,9 @@ function Map() {
   function loadReviewInfo(id){
     API.getReview(id)
       .then(res=>
-        {setInfo(res.data);
-        setAmenities(res.data.review)}
-        )
+        { setInfo(res.data[0]);
+          setAmenity(res.data[0].review[0])
+        })
       .catch(error=>console.log(error))
   }
 
@@ -168,21 +154,20 @@ function Map() {
               onCloseClick={()=> {
                 setSelected(null);
                 setInfo(null);
-                setAmenities(null)
+                // setAmenities(null)
               }}
             >
-              <div>
-                <h2>Place</h2>
-                <p>Rating: </p>
+              {info && amenities ? (<div>
+                <h2>{info.locationName}</h2>
+                <p>Rating: {info.review[0].rating}</p>
+                <p>Amenities: {amenities}</p>
+                <button>Leave A Review</button>
+              </div>) : (<div>
+                <h2>Place: </h2>
+                <p>Rating:  </p>
                 <p>Amenities:</p>
                 <button>Leave A Review</button>
-              </div>
-              {/* <div>
-                <h2>{info.id}</h2>
-                <p>Rating: {info.review[0].rating}</p>
-                <p>Amenities{amenities}</p>
-                <button>Leave A Review</button>
-              </div> */}
+              </div>)}
             </InfoWindow>): null}
         </GoogleMap>
     </div>
