@@ -9,7 +9,7 @@ import { Row, Container, Col, Span, ButtonGroup } from "react-bootstrap";
 class HomeButton extends Component {
   render() {
     return (
-      <>
+      <div className = "container" style={{textAlign:"center"}}>
         <ButtonGroup vertical >
           <div class="butts vertical-center">
             <span>
@@ -31,7 +31,7 @@ class HomeButton extends Component {
             </Col>
           </div>
         </ButtonGroup>
-      </>
+      </div>
     );
   }
 }
