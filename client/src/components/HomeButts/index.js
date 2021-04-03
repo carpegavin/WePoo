@@ -3,15 +3,15 @@ import { Button } from "react-bootstrap";
 // import { Link } from "react-router-dom";
 import "./butts.css";
 // import './Navbar.css';
-import { Row, Container, Col, Span } from "react-bootstrap";
+import { Row, Container, Col, Span, ButtonGroup } from "react-bootstrap";
 // import { styles } from "react-bootstrap";
 
 class HomeButton extends Component {
   render() {
     return (
       <>
-        <Container class="btn-group-vertical" >
-          <div class="butts vertical-center horizontal center">
+        <ButtonGroup vertical >
+          <div class="butts vertical-center">
             <span>
               <Button variant="warning" size="lg" onClick={() => "/map"}>
                 GOTTA GO
@@ -30,7 +30,7 @@ class HomeButton extends Component {
               </Button>
             </Col>
           </div>
-        </Container>
+        </ButtonGroup>
       </>
     );
   }
