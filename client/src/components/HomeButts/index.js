@@ -12,23 +12,28 @@ class HomeButton extends Component {
       <div className="container" style={{ textAlign: "center" }}>
         <div class="btn-group btn-group-sm" vertical >
           <div class="butts vertical-center">
-            <div class="col-md-4">
-              <Button variant="warning"  onClick={() => "/map"}>
+
+            <Col style={{height: "9.5rem" }}>
+              <Button class="one"
+              onClick={() => "/map"}>
                 GOTTA GO
               </Button>
-            </div>
+            </Col>
 
-            <Col class="col-md-4">
-              <Button variant="warning" size="lg" onClick={() => "/player"}>
+            <Col style={{height: "9.5rem"}}>
+              <Button class="two"
+              onClick={() => "/player"}>
                 GOING
               </Button>
             </Col>
 
-            <Col class="buttCol">
-              <Button variant="warning" size="lg" onClick={() => "/review"}>
+            <Col style={{height: "9.5rem"}}>
+              <Button  
+              onClick={() => "/review"}>
                 GONE
               </Button>
             </Col>
+
           </div>
         </div>
       </div>
