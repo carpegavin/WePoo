@@ -165,7 +165,7 @@ function Map() {
               </div>) : (<div>
                 <h2>No Reviews for this Location</h2>
                 
-                <a href={`/review/new/${info.id}`}><button>Leave A Review</button></a>
+               <a href={`/review/${selected.lat}${selected.lng}`}><button>Leave A Review</button></a>
               </div>)}
             </InfoWindow>): null}
         </GoogleMap>
