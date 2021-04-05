@@ -6,7 +6,6 @@ import { Row, Container, Col, Span, ButtonGroup } from "react-bootstrap";
 // import { styles } from "react-bootstrap";
 // import ""{ useHistory } from 'react-router-dom';
 // import { props } from "react";
-// import './Navbar.css';
 // const history = useHistory();
 
 class HomeButton extends Component {
@@ -17,22 +16,20 @@ class HomeButton extends Component {
           <div className="butts vertical-center">
 
             <Col style={{ height: "9.5rem" }}>
-              <Link className="individualLinkerino" to="/map">
+              <Link className="individualLink" to="/map">
                 <p class="text">GOTTA GO</p>
               </Link>
             </Col>
 
             <Col style={{ height: "9.5rem" }}>
-              <Link className="individualLinkerino"
-              to="/player">
-              <p class="text">GOING</p>
+              <Link className="individualLink" to="/player">
+                <p class="text">GOING</p>
               </Link>
             </Col>
 
-            <Col >
-              <Link className="individualLinkerino"
-              to="/review">
-              <p class="text">GONE</p>
+            <Col>
+              <Link className="individualLink" to="/review">
+                <p class="text">GONE</p>
               </Link>
             </Col>
 
