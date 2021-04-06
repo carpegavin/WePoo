@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import API from "../../utils/API";
 // import { List, ListItem } from "../components/List";
 import { Navbar,Row, Container, Col, Form, Button} from 'react-bootstrap';
@@ -7,6 +7,16 @@ import "./Review.css"
 function Review() {
   // Setting our component's initial state
   const [reviews, setReviews] = useState([])
+  const locationRef = useRef();
+  const reviewRef = useRef();
+  const ratingRef = useRef();
+  const publicRef = useRef();
+  const femHyRef = useRef();
+  const singleAccRef = useRef();
+  const handiRef = useRef();
+  const changingTblRef = useRef();
+  
+
 
   const [formObject, setFormObject] = useState({})
 
@@ -19,11 +29,11 @@ function Review() {
 
   // Loads all books and sets them to books
   function loadReviews() {
-    API.getReview()
-      .then(res => 
-        setReviews(res.data)
-      )
-      .catch(err => console.log(err));
+    // API.getReview(req.params.id)
+    //   .then(res => 
+    //     setReviews(res.data.review)
+    //   )
+    //   .catch(err => console.log(err));
   };
 
   // Deletes a book from the database with a given id, then reloads books from the db
@@ -32,6 +42,48 @@ function Review() {
       .then(res => loadReviews())
       .catch(err => console.log(err));
   }
+
+  function refHandle() {
+    if (femHyRef.current.value === "on"){
+      femHyRef.current.value = true
+    }
+    else {
+      femHyRef.current.value = false
+    }
+
+
+
+    if (publicRef.current.value === "on"){
+      publicRef.current.value = true
+   }
+   else {
+    publicRef.current.value = false
+   }
+
+
+
+   if (singleAccRef.current.value === "on"){
+    singleAccRef.current.value = true }
+    else {
+      singleAccRef.current.value = false
+    }
+
+
+    if (changingTblRef.current.value === "on"){
+      changingTblRef.current.value = true
+    }
+    else {
+      changingTblRef.current.value = false
+    }
+
+
+    if (handiRef.current.value === "on"){
+      handiRef.current.value = true
+    }
+    else {
+      handiRef.current.value = false
+    }
+      }
 
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
@@ -43,17 +95,37 @@ function Review() {
   // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.location && formObject.rating) {
+    if (formObject.locationName && formObject.review.rating) {
       API.saveReview({
-        location: formObject.location,
-        rating: formObject.rating,
-        handicapAccess: formObject.handicapAccess,
-        babyChangingTable: formObject.babyChangingTable,
-        public: formObject.public,
-        singlePersonBath: formObject.singlePersonBath,
-        feminineHygieneProducts: formObject.feminineHygieneProducts,
-        reviewCreated: formObject.reviewCreated,
+        // id: req.params.id,
+        locationName: locationRef.current.value,
+        lat: 0,
+        lon: 0,
+        review: [{
+          reviewText:reviewRef.current.value,
+          rating: ratingRef.current.value,
+          handicapAccess: handiRef.current.value,
+          babyChangingTable: changingTblRef.current.value,
+          public: publicRef.current.value,
+          singlePersonBath: singleAccRef.current.value,
+          feminineHygieneProducts: femHyRef.current.value,
+          reviewCreated: new Date()
+
+        }] 
+        ,
+
       })
+        .then( () => {
+          reviewRef.current.value = ""
+          ratingRef.current.value = 1 
+          handiRef.current.value =  "off"
+          changingTblRef.current.value = "off"
+          publicRef.current.value = "off"
+          singleAccRef.current.value = "off"
+          femHyRef.current.value = "off" 
+ }
+
+        )
         .then(res => loadReviews())
         .catch(err => console.log(err));
     }
@@ -64,13 +136,17 @@ function Review() {
   <Container className="justify-content-center">
     <Row className="all" style={{ textAlign: "center" }} >
       <Form id ="form" className="justify-content-center" >
-        <Form.Group controlId="exampleForm.ControlInput1" className="justify-content-center">
+        <Form.Group  controlId="exampleForm.ControlInput1" className="justify-content-center">
           <Form.Label>Location</Form.Label>
+<<<<<<< HEAD
           <Form.Control type="name" placeholder="In the park/McDonalds/Bar"/>
+=======
+          <Form.Control ref = {locationRef} type="text" placeholder="Location Name" />
+>>>>>>> 9dc5f697b37071a7211ad536edd29cf22fe27b2b
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label>Rating</Form.Label>
-          <Form.Control as="select">
+          <Form.Control ref = {ratingRef} as="select">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -82,15 +158,15 @@ function Review() {
          
           <Form.Row style={{textAlign: "left"}}>
             <Col>
-              <Form.Check 
-                type="switch"
+              <Form.Check ref = {publicRef}
+                type="checkbox"
                 id="Public-switch"
                 label="Public"
             
               />
             </Col>
             <Col>
-              <Form.Check 
+              <Form.Check ref = {singleAccRef}
                 type="switch"
                 id="SA-switch"
                 label="Single"
@@ -100,14 +176,14 @@ function Review() {
           <br />
           <Form.Row>
             <Col>
-              <Form.Check 
+              <Form.Check ref = {femHyRef}
                 type="switch"
                 id="FH-switch"
                 label="Feminine Hygene"
               />
             </Col>
             <Col>
-              <Form.Check 
+              <Form.Check ref = {handiRef}
                 type="switch"
                 id="HA-switch"
                 label="Handicap Accessible"
@@ -115,7 +191,7 @@ function Review() {
            </Col>
            <Col style={{textAlign: "left"}}>
            <br />
-              <Form.Check 
+              <Form.Check ref = {changingTblRef}
                 type="switch"
                 id="CT-switch"
                 label="Baby Table"
@@ -125,7 +201,22 @@ function Review() {
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>How'd it go?</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Control ref = {reviewRef} as="textarea" rows={3} />
+          <button  
+          style={{ float: "right", marginBottom: 10 }} 
+          className="btn btn-success"
+          onClick = {(e)=> {
+            e.preventDefault();
+            console.log(formObject)
+
+            console.log(publicRef.current.value)
+            console.log(ratingRef.current.value)
+          }
+        }
+          >
+
+        
+      </button>
         </Form.Group>
       </Form>
     </Row>
@@ -134,13 +225,8 @@ function Review() {
     );
   }
 
-  export function FormBtn(props) {
-    return (
-      <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-        {props.children}
-      </button>
-    );
-  }
+  
+  
 
 
 export default Review;

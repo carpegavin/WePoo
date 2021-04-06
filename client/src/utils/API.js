@@ -16,5 +16,8 @@ export default {
   // Saves a book to the database
   saveReview: function(reviewData) {
     return axios.post("/api/review", reviewData);
+  },
+  newReview: function(id, reviewData) {
+    return axios.put("/api/review/" + id, reviewData);
   }
 };
