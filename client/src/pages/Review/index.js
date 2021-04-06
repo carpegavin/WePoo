@@ -138,11 +138,7 @@ function Review() {
       <Form id ="form" className="justify-content-center" >
         <Form.Group  controlId="exampleForm.ControlInput1" className="justify-content-center">
           <Form.Label>Location</Form.Label>
-<<<<<<< HEAD
-          <Form.Control type="name" placeholder="In the park/McDonalds/Bar"/>
-=======
           <Form.Control ref = {locationRef} type="text" placeholder="Location Name" />
->>>>>>> 9dc5f697b37071a7211ad536edd29cf22fe27b2b
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label>Rating</Form.Label>
