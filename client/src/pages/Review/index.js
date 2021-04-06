@@ -77,21 +77,22 @@ function Review() {
             <option>5</option>
           </Form.Control>
         </Form.Group>
-        <Form.Group controlId="formBasicCheckbox">
-          <Form.Label>Additional Info</Form.Label>
-          <Form.Row>
+        <Form.Group style={{ textAlign: "center" }}controlId="formBasicCheckbox">
+          <Form.Label >Ammenities</Form.Label>
+          <Form.Row style={{textAlign: "left"}}>
             <Col>
               <Form.Check 
                 type="switch"
                 id="Public-switch"
                 label="Public"
+            
               />
             </Col>
             <Col>
               <Form.Check 
                 type="switch"
                 id="SA-switch"
-                label="Single Access"
+                label="Single"
               />
             </Col>
           </Form.Row>
@@ -110,7 +111,7 @@ function Review() {
                 label="Handicap Accessible"
               />
            </Col>
-           <Col>
+           <Col style={{textAlign: "left"}}>
               <Form.Check 
                 type="switch"
                 id="CT-switch"
@@ -120,7 +121,7 @@ function Review() {
           </Form.Row>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Tell us how it went</Form.Label>
+          <Form.Label>How'd it go?</Form.Label>
           <Form.Control as="textarea" rows={3} />
         </Form.Group>
       </Form>
