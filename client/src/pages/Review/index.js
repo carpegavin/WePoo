@@ -66,7 +66,7 @@ function Review() {
       <Form id ="form" className="justify-content-center" >
         <Form.Group controlId="exampleForm.ControlInput1" className="justify-content-center">
           <Form.Label>Location</Form.Label>
-          <Form.Control type="email" placeholder="name@example.com" />
+          <Form.Control type="name" placeholder="In the park/McDonalds/Bar"/>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label>Rating</Form.Label>

@@ -15,13 +15,13 @@ class HomeButton extends Component {
         <div className="btn-group btn-group-sm" vertical="true">
           <div className="butts vertical-center">
 
-            <Col style={{ height: "9.5rem" }}>
+            <Col style={{ height: "12rem" }}>
               <Link className="individualLink" to="/map">
                 <p class="text">GOTTA GO</p>
               </Link>
             </Col>
 
-            <Col style={{ height: "9.5rem" }}>
+            <Col style={{ height: "12rem" }}>
               <Link className="individualLink" to="/player">
                 <p class="text">GOING</p>
               </Link>
