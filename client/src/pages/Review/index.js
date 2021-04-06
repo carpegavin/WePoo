@@ -29,11 +29,11 @@ function Review() {
 
   // Loads all books and sets them to books
   function loadReviews() {
-    API.getReview(req.params.id)
-      .then(res => 
-        setReviews(res.data.review)
-      )
-      .catch(err => console.log(err));
+    // API.getReview(req.params.id)
+    //   .then(res => 
+    //     setReviews(res.data.review)
+    //   )
+    //   .catch(err => console.log(err));
   };
 
   // Deletes a book from the database with a given id, then reloads books from the db
@@ -97,7 +97,7 @@ function Review() {
     event.preventDefault();
     if (formObject.locationName && formObject.review.rating) {
       API.saveReview({
-        id: req.params.id,
+        // id: req.params.id,
         locationName: locationRef.current.value,
         lat: 0,
         lon: 0,
