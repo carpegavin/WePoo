@@ -120,7 +120,7 @@ function Review() {
   <Container className="justify-content-center">
     <Row className="all" style={{ textAlign: "center" }} >
       <Form id ="form" className="justify-content-center" >
-        {reviews?
+        {reviews[0]?
         (<Form.Group  controlId="exampleForm.ControlInput1" className="justify-content-center">
           <Form.Label>Location</Form.Label>
           <Form.Control ref = {locationRef} type="text" placeholder="Location Name" disabled={true}/>
@@ -187,18 +187,18 @@ function Review() {
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>How'd it go?</Form.Label>
           <Form.Control ref = {reviewRef} as="textarea" rows={3} />
-          {reviews?(<button  
+          {reviews[0]?(<button  
             style={{ float: "right", marginBottom: 10 }} 
             className="btn btn-success"
             onClick = {handleFormSubmitOld}
-          >Save Review
+          >Save New Review
           </button>):
           (
             <button  
               style={{ float: "right", marginBottom: 10 }} 
               className="btn btn-success"
               onClick = {handleFormSubmitNew}
-            >Save Review
+            >Save New Location
             </button>
           )}
         </Form.Group>
