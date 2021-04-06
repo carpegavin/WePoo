@@ -5,7 +5,7 @@
   align-items: center;
 }
 #linkStyle {
-  margin-top: 128px;
+  margin-top: 201px;
   text-align: center;
 }
 .individualLink {
@@ -18,19 +18,15 @@
   font-size: 2.8rem !important;
   font-family: impact !important;
   border: solid black 1px !important;
-  background-color:orange !important;
+  background-color: orange !important;
   color: rgb(36, 3, 8) !important;
   font-stretch: extra-expanded !important;
- 
-  
 }
 
 .individualLink p {
   position: relative;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
   top: 50%;
-  left:50%;
-  transform: translate(-50%, -28%)
-  
+  left: 50%;
+  transform: translate(-50%, -28%);
 }
-
