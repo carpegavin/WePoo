@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player/lazy";
 import "./style.css";
+import { Navbar,Row, Container, Col} from 'react-bootstrap';
+
 
 export class ResponsivePlayer extends Component {
   render() {
     return (
+
       <div className="player-wrapper">
        <ReactPlayer
           className="react-player"
