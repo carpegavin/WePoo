@@ -27,73 +27,25 @@ function Review() {
     loadReviews();
   }, []);
 
-  // Loads all books and sets them to books
+  // Loads all reviews for id
   function loadReviews() {
     API.getReview(id)
       .then(res => 
-        setReviews(res.data.review)
+        setReviews(res.data)
       )
       .catch(err => console.log(err));
   };
 
-  // Deletes a book from the database with a given id, then reloads books from the db
+  // Deletes a review
   function deleteReview(id) {
     API.deleteReview(id)
       .then((res) => loadReviews())
       .catch((err) => console.log(err));
   }
 
-  // function refHandle() {
-  //   if (femHyRef.current.value === "on"){
-  //     femHyRef.current.value = true
-  //   }
-  //   else {
-  //     femHyRef.current.value = false
-  //   }
-
-
-
-  //   if (publicRef.current.value === "on"){
-  //     publicRef.current.value = true
-  //  }
-  //  else {
-  //   publicRef.current.value = false
-  //  }
-
-
-
-  //  if (singleAccRef.current.value === "on"){
-  //   singleAccRef.current.value = true }
-  //   else {
-  //     singleAccRef.current.value = false
-  //   }
-
-
-  //   if (changingTblRef.current.value === "on"){
-  //     changingTblRef.current.value = true
-  //   }
-  //   else {
-  //     changingTblRef.current.value = false
-  //   }
-
-
-  //   if (handiRef.current.value === "on"){
-  //     handiRef.current.value = true
-  //   }
-  //   else {
-  //     handiRef.current.value = false
-  //   }
-  //     }
-
-  // Handles updating component state when the user types into the input field
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value });
-  }
-
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
-  function handleFormSubmit(event) {
+  function handleFormSubmitNew(event) {
     event.preventDefault();
     if (locationRef.current.value && ratingRef.current.value) {
       API.saveReview({
@@ -132,15 +84,51 @@ function Review() {
     }
   }
 
+  function handleFormSubmitOld(){
+    API.newReview(id,{
+        reviewText:reviewRef.current.value,
+        rating: ratingRef.current.value,
+        handicapAccess: handiRef.current.checked,
+        babyChangingTable: changingTblRef.current.checked,
+        public: publicRef.current.checked,
+        singlePersonBath: singleAccRef.current.checked,
+        feminineHygieneProducts: femHyRef.current.checked,
+        reviewCreated: new Date()
+    })
+    .then( () => {
+      reviewRef.current.value = "";
+      ratingRef.current.value = 1 ;
+      handiRef.current.checked =  false;
+      changingTblRef.current.checked = false;
+      publicRef.current.checked = false;
+      singleAccRef.current.checked = false;
+      femHyRef.current.checked = false;
+}
+
+    )
+    .then(res => loadReviews())
+    .catch(err => console.log(err));
+  }
+
+  if(reviews[0]){
+    locationRef.current.value = reviews[0].locationName
+    // locationRef.current.value = reviews.locationName
+  }
+
   // Need to find out how to pull lat and lon from user
     return (
   <Container className="justify-content-center">
     <Row className="all" style={{ textAlign: "center" }} >
       <Form id ="form" className="justify-content-center" >
-        <Form.Group  controlId="exampleForm.ControlInput1" className="justify-content-center">
+        {reviews?
+        (<Form.Group  controlId="exampleForm.ControlInput1" className="justify-content-center">
           <Form.Label>Location</Form.Label>
-          <Form.Control ref = {locationRef} type="text" placeholder="Location Name" />
-        </Form.Group>
+          <Form.Control ref = {locationRef} type="text" placeholder="Location Name" disabled={true}/>
+        </Form.Group>):
+        (<Form.Group  controlId="exampleForm.ControlInput1" className="justify-content-center">
+        <Form.Label>Location</Form.Label>
+        <Form.Control ref = {locationRef} type="text" placeholder="Location Name" disabled={false} />
+      </Form.Group>)}
         <Form.Group controlId="exampleForm.ControlSelect1">
           <Form.Label>Rating</Form.Label>
           <Form.Control ref = {ratingRef} as="select">
@@ -199,12 +187,20 @@ function Review() {
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>How'd it go?</Form.Label>
           <Form.Control ref = {reviewRef} as="textarea" rows={3} />
-          <button  
+          {reviews?(<button  
             style={{ float: "right", marginBottom: 10 }} 
             className="btn btn-success"
-            onClick = {handleFormSubmit}
+            onClick = {handleFormSubmitOld}
           >Save Review
-          </button>
+          </button>):
+          (
+            <button  
+              style={{ float: "right", marginBottom: 10 }} 
+              className="btn btn-success"
+              onClick = {handleFormSubmitNew}
+            >Save Review
+            </button>
+          )}
         </Form.Group>
       </Form>
     </Row>

@@ -24,6 +24,7 @@ module.exports = {
       .catch(err =>{ console.log(err); res.status(422).json(err)});
   },
   update: function(req, res) {
+    console.log(req.params.id)
     db.Review
       .findOneAndUpdate({ id: req.params.id }, {
         $push:{
