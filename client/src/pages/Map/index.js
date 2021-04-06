@@ -161,12 +161,11 @@ function Map() {
                 <h2>{info.locationName}</h2>
                 <p>Rating: {info.review[0].rating}</p>
                 <p>Amenities: {amenities}</p>
-                <button>Leave A Review</button>
+                <a href={`/review/${info.id}`}><button>Leave A Review</button></a>
               </div>) : (<div>
-                <h2>Place: </h2>
-                <p>Rating:  </p>
-                <p>Amenities:</p>
-                <button>Leave A Review</button>
+                <h2>No Reviews for this Location</h2>
+                
+               <a href={`/review/${selected.lat}${selected.lng}`}><button>Leave A Review</button></a>
               </div>)}
             </InfoWindow>): null}
         </GoogleMap>

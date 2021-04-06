@@ -1,47 +1,36 @@
 .vertical-center {
-    min-height: 100%;  
-    min-height: 100vh; 
-    /* min-width: 100%;
-    min-width: 100vh; */
-    padding: 5px;
-    align-items: center;
-
-  }
-
-Button {
-    
-    display:flex;
-    
-    position: relative;
-    height: 8rem;
-    width: 15rem !important;
-    
-    font-family: bold !important;
-    border-radius: 20px !important;
-    font-size: 3rem !important;
-    font-family: impact !important;
-    margin-top: 5rem !important;
+  min-height: 80%;
+  min-height: 80vh;
+  padding: 5px;
+  align-items: center;
 }
-
-.buttCol {
+#linkStyle {
+  margin-top: 128px;
+  text-align: center;
+}
+.individualLink {
   display: flex;
-  flex-direction: column;
-  max-height: 3rem !important;
+  position: relative;
+  height: 8rem;
+  width: 17rem !important;
+  font-family: bold !important;
+  border-radius: 20px !important;
+  font-size: 2.8rem !important;
+  font-family: impact !important;
+  border: solid black 1px !important;
+  background-color:orange !important;
+  color: rgb(36, 3, 8) !important;
+  font-stretch: extra-expanded !important;
+ 
+  
 }
 
-
-
-
-
-
-
+.individualLink p {
+  position: relative;
+  font-family: 'Londrina Solid', cursive;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -28%)
   
+}
 
-  
-
-  
-
-  
-
-
-  
