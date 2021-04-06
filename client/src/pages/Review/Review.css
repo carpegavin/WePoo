@@ -8,5 +8,15 @@ form {
     height: 75vh;
     justify-content: center;
     font-size:125%;
+    color: yellow;
+    /* margin-top: 5rem;
+    margin-left: 1rem; */
 }
 
+.all{
+    padding: 20px !important;
+    margin-top: 3.6rem;
+    width: 100% !important;
+    margin-left: 4px !important;
+    font-family: 'Noto Sans', sans-serif;
+}

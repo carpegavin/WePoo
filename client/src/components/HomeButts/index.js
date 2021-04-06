@@ -27,11 +27,7 @@ class HomeButton extends Component {
               </Link>
             </Col>
 
-            <Col>
-              <Link className="individualLink" to="/review">
-                <p class="text">GONE</p>
-              </Link>
-            </Col>
+            
 
           </div>
         </div>
@@ -41,3 +37,11 @@ class HomeButton extends Component {
 }
 
 export default HomeButton;
+
+
+
+//             <Col>
+//               <Link className="individualLink" to="/review">
+//                 <p class="text">GONE</p>
+//               </Link>
+//             </Col>

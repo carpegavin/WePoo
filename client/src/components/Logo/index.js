@@ -16,7 +16,7 @@ function Logo() {
                   <img
                     src="/assets/WePooLogo.png"
                     width=""
-                    height=""
+                    height="50px"
                     className="d-inline-block align-top"
                     alt=""
                   />

@@ -133,7 +133,8 @@ function Review() {
 
   // Need to find out how to pull lat and lon from user
     return (
-      <Container className="justify-content-center">
+  <Container className="justify-content-center">
+    <Row className="all" style={{ textAlign: "center" }} >
       <Form id ="form" className="justify-content-center" >
         <Form.Group  controlId="exampleForm.ControlInput1" className="justify-content-center">
           <Form.Label>Location</Form.Label>
@@ -149,24 +150,26 @@ function Review() {
             <option>5</option>
           </Form.Control>
         </Form.Group>
-        <Form.Group controlId="formBasicCheckbox">
-          <Form.Label>Additional Info</Form.Label>
-          <Form.Row>
+        <Form.Group style={{ textAlign: "center" }}controlId="formBasicCheckbox">
+         
+          <Form.Row style={{textAlign: "left"}}>
             <Col>
               <Form.Check ref = {publicRef}
                 type="checkbox"
                 id="Public-switch"
                 label="Public"
+            
               />
             </Col>
             <Col>
               <Form.Check ref = {singleAccRef}
                 type="switch"
                 id="SA-switch"
-                label="Single Access"
+                label="Single"
               />
             </Col>
           </Form.Row>
+          <br />
           <Form.Row>
             <Col>
               <Form.Check ref = {femHyRef}
@@ -182,17 +185,18 @@ function Review() {
                 label="Handicap Accessible"
               />
            </Col>
-           <Col>
+           <Col style={{textAlign: "left"}}>
+           <br />
               <Form.Check ref = {changingTblRef}
                 type="switch"
                 id="CT-switch"
-                label="Changing Table"
+                label="Baby Table"
               />
             </Col>
           </Form.Row>
         </Form.Group>
-        <Form.Group  controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Tell us how it went</Form.Label>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>How'd it go?</Form.Label>
           <Form.Control ref = {reviewRef} as="textarea" rows={3} />
           <button  
           style={{ float: "right", marginBottom: 10 }} 
@@ -209,10 +213,11 @@ function Review() {
 
         
       </button>
-              </Form.Group>
+        </Form.Group>
       </Form>
-      </Container>
-      
+    </Row>
+  </Container>
+    
     );
   }
 
