@@ -28,6 +28,11 @@ review: [{
       validate: [({ rating }) => rating <= 5, "Rating 1-5"],
   },
 
+reviewText : {
+      type: String,
+
+  },
+
   handicapAccess: {
     type: Boolean
   },
