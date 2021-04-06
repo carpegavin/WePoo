@@ -10,7 +10,7 @@ mongoose.connect(
 
 const bookSeed = [
   {
-    id: "30.2672-97.7431",
+    id: "30.2672wepoo-97.7431",
     locationName: "My House",
     lat: 30.2672 ,
     lon: -97.7431,

@@ -25,7 +25,7 @@ lon: {
 review: [{
   rating: {
       type: Number,
-      validate: [({ rating }) => rating <= 5, "Rating 1-5"],
+      
   },
 
 reviewText : {

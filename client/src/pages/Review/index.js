@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
+import {useParams} from "react-router-dom"
 import API from "../../utils/API";
 // import { List, ListItem } from "../components/List";
 import { Navbar,Row, Container, Col, Form, Button} from 'react-bootstrap';
 import "./Review.css"
 
 function Review() {
+
+  let { id } = useParams();
+
   // Setting our component's initial state
   const [reviews, setReviews] = useState([])
   const locationRef = useRef();
@@ -29,11 +33,11 @@ function Review() {
 
   // Loads all books and sets them to books
   function loadReviews() {
-    // API.getReview(req.params.id)
-    //   .then(res => 
-    //     setReviews(res.data.review)
-    //   )
-    //   .catch(err => console.log(err));
+    API.getReview(id)
+      .then(res => 
+        setReviews(res.data.review)
+      )
+      .catch(err => console.log(err));
   };
 
   // Deletes a book from the database with a given id, then reloads books from the db
@@ -43,47 +47,47 @@ function Review() {
       .catch(err => console.log(err));
   }
 
-  function refHandle() {
-    if (femHyRef.current.value === "on"){
-      femHyRef.current.value = true
-    }
-    else {
-      femHyRef.current.value = false
-    }
+  // function refHandle() {
+  //   if (femHyRef.current.value === "on"){
+  //     femHyRef.current.value = true
+  //   }
+  //   else {
+  //     femHyRef.current.value = false
+  //   }
 
 
 
-    if (publicRef.current.value === "on"){
-      publicRef.current.value = true
-   }
-   else {
-    publicRef.current.value = false
-   }
+  //   if (publicRef.current.value === "on"){
+  //     publicRef.current.value = true
+  //  }
+  //  else {
+  //   publicRef.current.value = false
+  //  }
 
 
 
-   if (singleAccRef.current.value === "on"){
-    singleAccRef.current.value = true }
-    else {
-      singleAccRef.current.value = false
-    }
+  //  if (singleAccRef.current.value === "on"){
+  //   singleAccRef.current.value = true }
+  //   else {
+  //     singleAccRef.current.value = false
+  //   }
 
 
-    if (changingTblRef.current.value === "on"){
-      changingTblRef.current.value = true
-    }
-    else {
-      changingTblRef.current.value = false
-    }
+  //   if (changingTblRef.current.value === "on"){
+  //     changingTblRef.current.value = true
+  //   }
+  //   else {
+  //     changingTblRef.current.value = false
+  //   }
 
 
-    if (handiRef.current.value === "on"){
-      handiRef.current.value = true
-    }
-    else {
-      handiRef.current.value = false
-    }
-      }
+  //   if (handiRef.current.value === "on"){
+  //     handiRef.current.value = true
+  //   }
+  //   else {
+  //     handiRef.current.value = false
+  //   }
+  //     }
 
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
@@ -95,20 +99,20 @@ function Review() {
   // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.locationName && formObject.review.rating) {
+    if (locationRef.current.value && ratingRef.current.value) {
       API.saveReview({
-        // id: req.params.id,
+        id: id,
         locationName: locationRef.current.value,
-        lat: 0,
-        lon: 0,
+        lat: id.split("wepoo")[0],
+        lon: id.split("wepoo")[1],
         review: [{
           reviewText:reviewRef.current.value,
           rating: ratingRef.current.value,
-          handicapAccess: handiRef.current.value,
-          babyChangingTable: changingTblRef.current.value,
-          public: publicRef.current.value,
-          singlePersonBath: singleAccRef.current.value,
-          feminineHygieneProducts: femHyRef.current.value,
+          handicapAccess: handiRef.current.checked,
+          babyChangingTable: changingTblRef.current.checked,
+          public: publicRef.current.checked,
+          singlePersonBath: singleAccRef.current.checked,
+          feminineHygieneProducts: femHyRef.current.checked,
           reviewCreated: new Date()
 
         }] 
@@ -116,13 +120,14 @@ function Review() {
 
       })
         .then( () => {
-          reviewRef.current.value = ""
-          ratingRef.current.value = 1 
-          handiRef.current.value =  "off"
-          changingTblRef.current.value = "off"
-          publicRef.current.value = "off"
-          singleAccRef.current.value = "off"
-          femHyRef.current.value = "off" 
+          locationRef.current.value = "";
+          reviewRef.current.value = "";
+          ratingRef.current.value = 1 ;
+          handiRef.current.checked =  false;
+          changingTblRef.current.checked = false;
+          publicRef.current.checked = false;
+          singleAccRef.current.checked = false;
+          femHyRef.current.checked = false;
  }
 
         )
@@ -155,7 +160,7 @@ function Review() {
           <Form.Row style={{textAlign: "left"}}>
             <Col>
               <Form.Check ref = {publicRef}
-                type="checkbox"
+                type="switch"
                 id="Public-switch"
                 label="Public"
             
@@ -199,20 +204,11 @@ function Review() {
           <Form.Label>How'd it go?</Form.Label>
           <Form.Control ref = {reviewRef} as="textarea" rows={3} />
           <button  
-          style={{ float: "right", marginBottom: 10 }} 
-          className="btn btn-success"
-          onClick = {(e)=> {
-            e.preventDefault();
-            console.log(formObject)
-
-            console.log(publicRef.current.value)
-            console.log(ratingRef.current.value)
-          }
-        }
-          >
-
-        
-      </button>
+            style={{ float: "right", marginBottom: 10 }} 
+            className="btn btn-success"
+            onClick = {handleFormSubmit}
+          >Save Review
+          </button>
         </Form.Group>
       </Form>
     </Row>

@@ -84,6 +84,7 @@ function Map() {
   }
 
   function loadReviewInfo(id){
+    console.log(id)
     API.getReview(id)
       .then(res=>
         { setInfo(res.data[0]);
@@ -137,7 +138,7 @@ function Map() {
             position={{lat: marker.lat, lng : marker.lng}}
             onClick={()=> {
               setSelected(marker);
-              let id = marker.lat.toString()+marker.lng.toString();
+              let id = marker.lat.toString()+"wepoo"+marker.lng.toString();
               loadReviewInfo(id)
             }}
             // icon={{
@@ -161,11 +162,11 @@ function Map() {
                 <h2>{info.locationName}</h2>
                 <p>Rating: {info.review[0].rating}</p>
                 <p>Amenities: {amenities}</p>
-                <a href={`/review/${info.id}`}><button>Leave A Review</button></a>
+                <a href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
               </div>) : (<div>
                 <h2>No Reviews for this Location</h2>
                 
-               <a href={`/review/${selected.lat}${selected.lng}`}><button>Leave A Review</button></a>
+               <a href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
               </div>)}
             </InfoWindow>): null}
         </GoogleMap>

@@ -15,10 +15,13 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    let body = req.body;
+    let num = parseInt(body.review[0].rating);
+    body.review[0].rating = num
     db.Review
-      .create(req.body)
+      .create(body)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err =>{ console.log(err); res.status(422).json(err)});
   },
   update: function(req, res) {
     db.Review
