@@ -17,7 +17,7 @@ export default {
   saveReview: function(reviewData) {
     return axios.post("/api/review", reviewData);
   },
-  newReview: function(reviewData) {
+  newReview: function(id, reviewData) {
     return axios.put("/api/review/" + id, reviewData);
   }
 };
