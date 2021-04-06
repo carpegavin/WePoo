@@ -13,7 +13,7 @@ import Locate from "../../components/Locate";
 
 const libraries = ["places"]
 const mapContainerStyle = {
-  marginTop: "5vh",
+  marginTop: "2vh",
   marginBottom: "5vh",
   width: "100vw",
   height: "80vh",
