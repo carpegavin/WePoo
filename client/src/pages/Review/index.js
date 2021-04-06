@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import {useParams} from "react-router-dom"
 import API from "../../utils/API";
 // import { List, ListItem } from "../components/List";
-import { Navbar,Row, Container, Col, Form, Button} from 'react-bootstrap';
-import "./Review.css"
+import { Navbar, Row, Container, Col, Form, Button } from "react-bootstrap";
+import "./Review.css";
 
 function Review() {
 
   let { id } = useParams();
 
   // Setting our component's initial state
-  const [reviews, setReviews] = useState([])
+  const [reviews, setReviews] = useState([]);
   const locationRef = useRef();
   const reviewRef = useRef();
   const ratingRef = useRef();
@@ -19,17 +19,13 @@ function Review() {
   const singleAccRef = useRef();
   const handiRef = useRef();
   const changingTblRef = useRef();
-  
 
-
-  const [formObject, setFormObject] = useState({})
-
-
+  const [formObject, setFormObject] = useState({});
 
   // Load all books and store them with setBooks
   useEffect(() => {
-    loadReviews()
-  }, [])
+    loadReviews();
+  }, []);
 
   // Loads all books and sets them to books
   function loadReviews() {
@@ -43,8 +39,8 @@ function Review() {
   // Deletes a book from the database with a given id, then reloads books from the db
   function deleteReview(id) {
     API.deleteReview(id)
-      .then(res => loadReviews())
-      .catch(err => console.log(err));
+      .then((res) => loadReviews())
+      .catch((err) => console.log(err));
   }
 
   // function refHandle() {
@@ -92,8 +88,8 @@ function Review() {
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
-  };
+    setFormObject({ ...formObject, [name]: value });
+  }
 
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
@@ -134,7 +130,7 @@ function Review() {
         .then(res => loadReviews())
         .catch(err => console.log(err));
     }
-  };
+  }
 
   // Need to find out how to pull lat and lon from user
     return (

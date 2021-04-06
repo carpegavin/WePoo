@@ -20,3 +20,7 @@ form {
     margin-left: 4px !important;
     font-family: 'Noto Sans', sans-serif;
 }
+
+.submitBtn{
+    padding: 10px !important;
+}
