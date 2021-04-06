@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/player">
             <Player />
           </Route>
-          <Route exact path={["/review","/review/:id","/review/new/:id"]}>
+          <Route exact path={["/review/:id"]}>
             <Review />
             {/* <ReviewForm/> */}
           </Route>
