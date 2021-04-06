@@ -61,7 +61,8 @@ function Review() {
 
   // Need to find out how to pull lat and lon from user
     return (
-      <Container className="justify-content-center">
+  <Container className="justify-content-center">
+    <Row className="all" style={{ textAlign: "center" }} >
       <Form id ="form" className="justify-content-center" >
         <Form.Group controlId="exampleForm.ControlInput1" className="justify-content-center">
           <Form.Label>Location</Form.Label>
@@ -78,7 +79,7 @@ function Review() {
           </Form.Control>
         </Form.Group>
         <Form.Group style={{ textAlign: "center" }}controlId="formBasicCheckbox">
-          <Form.Label >Ammenities</Form.Label>
+         
           <Form.Row style={{textAlign: "left"}}>
             <Col>
               <Form.Check 
@@ -96,6 +97,7 @@ function Review() {
               />
             </Col>
           </Form.Row>
+          <br />
           <Form.Row>
             <Col>
               <Form.Check 
@@ -112,10 +114,11 @@ function Review() {
               />
            </Col>
            <Col style={{textAlign: "left"}}>
+           <br />
               <Form.Check 
                 type="switch"
                 id="CT-switch"
-                label="Changing Table"
+                label="Baby Table"
               />
             </Col>
           </Form.Row>
@@ -125,7 +128,9 @@ function Review() {
           <Form.Control as="textarea" rows={3} />
         </Form.Group>
       </Form>
-      </Container>
+    </Row>
+  </Container>
+    
     );
   }
 
