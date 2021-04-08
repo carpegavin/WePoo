@@ -150,7 +150,7 @@ function Map() {
             />
             ))}
 
-            {selected ? (<InfoWindow
+            {selected ? (<InfoWindow id="InfoWindow"
               position={{lat:selected.lat,lng:selected.lng}}
               onCloseClick={()=> {
                 setSelected(null);

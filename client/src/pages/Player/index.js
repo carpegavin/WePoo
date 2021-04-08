@@ -6,6 +6,7 @@ class Player extends Component {
   render() {
     return (
       <div>
+      <p>Test Test</p>
         <MusicPlayer />
       </div>
     );
