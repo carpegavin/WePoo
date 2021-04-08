@@ -9,20 +9,23 @@ function BottomNavbar() {
     <>
       <Navbar fixed="bottom" className="justify-content-center" >
           <Navbar.Brand href="#home">
-            <Container className="justify-content-center">
-              <Row>
-                <Col xs>
+            <Container className="justify-content-space-between">
+              <Row className="align-items-center">
+                <Col xs="auto">
                   <Link to ='/'>
                   <img
                     src="/assets/home.png"
                     width="50"
                     height="50"
                     className="d-inline-block align-top"
+                    marginLeft=".5%"
                     alt=""
                   />
                   </Link>
                 </Col>
-                <Col xs>
+                <Col>
+                </Col>
+                <Col xs="auto">
                   <Link to ='/map'>
                   <img
                     src="/assets/maps.png"
@@ -34,6 +37,8 @@ function BottomNavbar() {
                   </Link>
                 </Col>
                 <Col>
+                </Col>
+                <Col xs="auto">
                   <Link to ='/player'>
                   <img
                     src="/assets/review.png"
