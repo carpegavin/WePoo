@@ -45,6 +45,7 @@ function Map() {
   const [selected, setSelected] = useState(null);
   const [info, setInfo] = useState(null);
   const [amenities, setAmenities] = useState(null);
+  const [averageScore, setAverageScore] = useState(null);
 
   function setAmenity(data){
     let array=[];
@@ -66,6 +67,13 @@ function Map() {
       }
     }
     setAmenities(array.join(", "));
+  }
+
+  function aveScore(data){
+    let totScore = 0
+    data.forEach(item=> totScore = totScore + item.rating)
+    let ave = (totScore/data.length).toFixed(2);
+    setAverageScore(ave)
   }
 
   function loadMarkers(){
@@ -91,7 +99,8 @@ function Map() {
     API.getReview(id)
       .then(res=>
         { setInfo(res.data[0]);
-          setAmenity(res.data[0].review[0])
+          setAmenity(res.data[0].review[(res.data[0].review.length-1)]);
+          aveScore(res.data[0].review)
         })
       .catch(error=>console.log(error))
   }
@@ -163,7 +172,7 @@ function Map() {
             >
               {info && amenities ? (<div>
                 <h2>{info.locationName}</h2>
-                <p>Rating: {info.review[0].rating}</p>
+                {info.review ? <p>Rating: {averageScore}</p>:<p>Rating: {info.review[0].rating}</p>}
                 <p>Amenities: {amenities}</p>
                 <a href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
               </div>) : (<div>
