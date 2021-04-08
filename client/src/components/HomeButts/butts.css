@@ -5,6 +5,7 @@
   align-items: center;
 }
 #linkStyle {
+  
   margin-top: 44%;
   text-align: center;
 }
@@ -20,7 +21,7 @@
   border: solid black 1px !important;
   background-color: orange !important;
   color: rgb(36, 3, 8) !important;
-  font-stretch: extra-expanded !important;
+  /* font-stretch: extra-expanded !important; */
 }
 
 .individualLink p {
