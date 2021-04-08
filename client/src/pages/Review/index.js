@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import {useParams} from "react-router-dom"
 import API from "../../utils/API";
 // import { List, ListItem } from "../components/List";
-import { Navbar, Row, Container, Col, Form, Button } from "react-bootstrap";
+import { Navbar, Row, Container, Col, Form, Button, Card } from "react-bootstrap";
 import "./Review.css";
 
 function Review() {
@@ -188,15 +188,15 @@ function Review() {
           <Form.Label>How'd it go?</Form.Label>
           <Form.Control ref = {reviewRef} as="textarea" rows={3} />
           {reviews[0]?(<button  
-            style={{ float: "right", marginBottom: 10 }} 
-            className="btn btn-success"
+            style={{ float: "right", margin: "10px" , backgroundColor:"#28A187", color:"#FFFFFF"}} 
+            className="btn"
             onClick = {handleFormSubmitOld}
           >Save New Review
           </button>):
           (
             <button  
-              style={{ float: "right", marginBottom: 10 }} 
-              className="btn btn-success"
+              style={{ float: "right", margin: "10px", backgroundColor:"#28A187",color:"#FFFFFF" }} 
+              className="btn"
               onClick = {handleFormSubmitNew}
             >Save New Location
             </button>
@@ -204,6 +204,33 @@ function Review() {
         </Form.Group>
       </Form>
     </Row>
+
+  <div style={{paddingTop:"30px", paddingBottom:"100px"}}>
+    {reviews[0]? (
+
+      reviews[0].review.map(item=>(
+      
+        <Card style={{margin:"12px", textAlign:"center"}}>
+          <Card.Header style={{backgroundColor:"#FFA500"}}>{reviews[0].locationName}</Card.Header>
+          <Card.Body>
+            <Card.Text>
+              Rating: {item.rating}
+            </Card.Text>
+            <Card.Text>
+              {item.reviewText}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      
+      ))
+      ):(
+      <Card style={{margin:"12px", textAlign:"center"}}> 
+        <Card.Body style={{textAlign:"center"}}>
+        <Card.Title>No Reviews Yet</Card.Title>
+        </Card.Body>
+      </Card>)
+    }
+    </div>
   </Container>
     
     );
