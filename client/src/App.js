@@ -18,18 +18,20 @@ function App() {
 
     <Router>
       <div>
-        <Logo/>
         <Switch>
           <Route exact path={["/"]}>
+            <Logo/>
             <Home />
           </Route>
           <Route exact path="/map">
             <Map />
           </Route>
           <Route exact path="/player">
+            <Logo/>
             <Player />
           </Route>
           <Route exact path={["/review/:id"]}>
+            <Logo/>
             <Review />
             {/* <ReviewForm/> */}
           </Route>
