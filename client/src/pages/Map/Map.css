@@ -19,7 +19,7 @@ button{
 
 .reviewButt {
     text-align: center !important;
-    margin-left: 2.8rem !important; 
-    border-radius:10px;
+    /* margin-left: 1% !important;  */
+    border-radius:5px;
 }
 

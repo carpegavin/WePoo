@@ -1,9 +1,10 @@
 button{
     align-items: center !important;
-    margin-left: 5.5rem !important;
+    margin-left: 5.8rem !important;
     font-family: "Londrina Solid", cursive;
     border-radius: 15px !important;
-    margin-top: 20px !important;
+    margin-top: 3% !important;
     background-color: orange!important;
+    font-weight: bold!important
     
 }
