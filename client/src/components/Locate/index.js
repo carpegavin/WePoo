@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./style.css";
 import usePlacesAutocomplete, {
     getGeocode,
     getLatLng
@@ -15,7 +16,7 @@ import usePlacesAutocomplete, {
   function Locate(props){
 
     return (
-        <button
+        <button class="btn-btn-warning btn-lg"
         onClick = {()=> {
             navigator.geolocation.getCurrentPosition((position)=> {
                 props.panTo({
@@ -24,7 +25,7 @@ import usePlacesAutocomplete, {
                 })
             },()=> null);
         }}
-        >Use Your Location</button>
+        >Current Location</button>
     )
   }
 
