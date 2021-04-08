@@ -18,11 +18,14 @@ const mapContainerStyle = {
   width: "100vw",
   height: "80vh",
 }
+let center = {};
 
-const center = {
-  lat: 30.2672 ,
-  lng: -97.7431
-}
+navigator.geolocation.getCurrentPosition((position)=> {
+  center={
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+  }
+},()=> center={lat: 30.2672,lng:-97.7431});
 
 const options = {
   style: mapStyles,
