@@ -1,10 +1,15 @@
 button{
     align-items: center !important;
     margin-left: 5.8rem !important;
-    font-family: "Londrina Solid", cursive;
+    font-family: 'Noto Sans', sans-serif;
     border-radius: 15px !important;
     margin-top: 3% !important;
     background-color: orange!important;
     font-weight: bold!important
+
     
 }
+
+/* body{
+    background: #28a187 !important;
+} */

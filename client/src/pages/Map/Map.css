@@ -1,7 +1,7 @@
 .InfoWindow{
     background-color: #264653 !important;
     color: yellow!important;
-    justify-content: center !important;
+    /* justify-content: center !important; */
     font-size: 15px !important;
     font-family: 'Noto Sans', sans-serif;
     
@@ -19,7 +19,7 @@ button{
 
 .reviewButt {
     text-align: center !important;
-    /* margin-left: 1% !important;  */
-    border-radius:5px;
+    margin-right: 20rem !important;  
+    border-radius:20px!important;
 }
 
