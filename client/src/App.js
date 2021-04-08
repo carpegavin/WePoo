@@ -9,6 +9,7 @@ import Home from "./pages/Home"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BottomNavbar from "./components/Navbar"
 import Logo from "./components/Logo"
+import Spotify from "./components/Spotify"
 // import ReactPlayer from "react-player";
 // import Play from "./pages/player"
 
@@ -28,6 +29,7 @@ function App() {
           </Route>
           <Route exact path="/player">
             <Logo/>
+            <Spotify/>
             <Player />
           </Route>
           <Route exact path={["/review/:id"]}>
