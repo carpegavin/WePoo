@@ -7,19 +7,19 @@ function Spotify (){
     return(
       <>
       <Container style={{ height: "80%",marginTop: "20%" }}>
-        <Row style={{ textAlign: "center" }}>
+        <Row style={{ textAlign: "center", color:"#ffc107"}}>
             <Col xs={10}>
             <div>
-            <h4 style={{ textAlign: "center", fontFamily:"Londrina Solid", marginLeft:"17%" }}>Our Staff Picked Songs for When You Need to Go</h4>
+            <h4 style={{ fontFamily:'Noto Sans', marginLeft:"17%", padding: "10px" }}>Hide not the smell but Sound, HERE</h4>
             </div>
             </Col>
         </Row>
         <Row style={{ textAlign: "center" }}>
             <Col>
-             <iframe src="https://open.spotify.com/embed/playlist/3Nmrj1LtDSzGHtdW3xRb6Y" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+             <iframe src="https://open.spotify.com/embed/playlist/3Nmrj1LtDSzGHtdW3xRb6Y" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </Col>
             <Col>
-            <iframe src="https://open.spotify.com/embed/playlist/6fHh4KSt7tzhKj7gBZDLQ8" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/6fHh4KSt7tzhKj7gBZDLQ8" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </Col>
            
         </Row>
@@ -27,19 +27,21 @@ function Spotify (){
        
         <Row style={{ textAlign: "center" }}>
             <Col>
-            <iframe src="https://open.spotify.com/embed/playlist/4wRmfPoD9bvkpFPPv6Kts4" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>            </Col>
+            <iframe src="https://open.spotify.com/embed/playlist/4wRmfPoD9bvkpFPPv6Kts4" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>  
+            </Col>
             <Col>
-            <iframe src="https://open.spotify.com/embed/playlist/0D9BTVsJ6igLjFSdhGTeQL" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>            </Col>
-           
+            <iframe src="https://open.spotify.com/embed/playlist/1b5lbK1SleNHcc2GyOjx2r" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </Col>          
         </Row>
         <br></br>
      
+
         <Row style={{ textAlign: "center" }}>
             <Col>
-             <iframe src="https://open.spotify.com/embed/playlist/3Nmrj1LtDSzGHtdW3xRb6Y" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/embed/album/5d3B7aEbk5qvssQvlmQXJZ" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>       
             </Col>
             <Col>
-             <iframe src="https://open.spotify.com/embed/playlist/3Nmrj1LtDSzGHtdW3xRb6Y" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/65tdwZLDG2s2ozwMKt9xVL" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>        
             </Col>
            
         </Row>

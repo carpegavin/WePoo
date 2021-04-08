@@ -1,4 +1,25 @@
-#InfoWindow{
-    background-color: #264653 !important
+.InfoWindow{
+    background-color: #264653 !important;
+    color: yellow!important;
+    /* justify-content: center !important; */
+    font-size: 15px !important;
+    font-family: 'Noto Sans', sans-serif;
+    
 
 }
+
+button{
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.justify-content-center{
+    align-items: center !important;
+}
+
+.reviewButt {
+    text-align: center !important;
+    margin-right: 20rem !important;  
+    border-radius:20px!important;
+}
+

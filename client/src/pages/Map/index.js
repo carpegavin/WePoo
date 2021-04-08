@@ -7,7 +7,7 @@ import {
   Marker,
   InfoWindow
 } from "@react-google-maps/api";
-
+import "./Map.css";
 import Search from "../../components/Search"
 import Locate from "../../components/Locate";
 
@@ -162,7 +162,7 @@ function Map() {
             />
             ))}
 
-            {selected ? (<InfoWindow id="InfoWindow"
+            {selected ? (<InfoWindow style={{color: "red" }}
               position={{lat:selected.lat,lng:selected.lng}}
               onCloseClick={()=> {
                 setSelected(null);
@@ -170,15 +170,15 @@ function Map() {
                 // setAmenities(null)
               }}
             >
-              {info && amenities ? (<div>
-                <h2>{info.locationName}</h2>
+              {info && amenities ? (<div className="InfoWindow" style={{textAlign:"center"}}>
+                <h2 className="justify-content-center">{info.locationName}</h2>
                 {info.review ? <p>Rating: {averageScore}</p>:<p>Rating: {info.review[0].rating}</p>}
                 <p>Amenities: {amenities}</p>
-                <a href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
+                <a className="reviewButt" href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
               </div>) : (<div>
                 <h2>No Reviews for this Location</h2>
                 
-               <a href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
+               <a style={{itemAlign:"center"}} href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
               </div>)}
             </InfoWindow>): null}
         </GoogleMap>
