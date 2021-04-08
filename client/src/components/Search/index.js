@@ -49,14 +49,14 @@ function Search(props){
                     console.log(error)
                 }
             }}>
-                <ComboboxInput 
+                {/* <ComboboxInput 
                 value= {value}
                 onChange = {(e)=> {
                     setValue(e.target.value)
                 }}
                 disabled = {!ready}
                 placeholder="Enter An Address"
-                />
+                /> */}
                 <ComboboxPopover>
                     <ComboboxList>
                         {status === "OK" && data.map(({id,description})=> (
