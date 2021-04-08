@@ -126,7 +126,7 @@ function Map() {
 
   const panTo = React.useCallback(({lat,lng})=> {
     mapRef.current.panTo({lat,lng});
-    mapRef.current.setZoom(18)
+    mapRef.current.setZoom(16)
   },[])
 
   if (loadError) return "Error Loading Maps";
@@ -138,7 +138,7 @@ function Map() {
         <Search panTo = {panTo}/>
         <GoogleMap
           mapContainerStyle = {mapContainerStyle}
-          zoom = {18}
+          zoom = {16}
           center = {center}
           options = {options}
           onClick = {onMapClick}
@@ -167,7 +167,8 @@ function Map() {
               onCloseClick={()=> {
                 setSelected(null);
                 setInfo(null);
-                // setAmenities(null)
+                setAverageScore(null);
+                setAmenities(null)
               }}
             >
               {info && amenities ? (<div className="InfoWindow" style={{textAlign:"center"}}>
