@@ -199,7 +199,7 @@ function Review() {
           </button>):
           (
             <button  
-              style={{ float: "right", margin: "10px", backgroundColor:"#28A187",color:"#FFFFFF" }} 
+              style={{ float: "right", margin: "10px", backgroundColor:"orange",fontFamily: 'Noto Sans'  }} 
               className="btn"
               onClick = {handleFormSubmitNew}
             >Save New Location

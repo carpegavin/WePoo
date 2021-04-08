@@ -161,7 +161,7 @@ function Map() {
                 // setAmenities(null)
               }}
             >
-              {info && amenities ? (<div className="InfoWindow">
+              {info && amenities ? (<div className="InfoWindow" style={{textAlign:"center"}}>
                 <h2 className="justify-content-center">{info.locationName} </h2>
                 <p>Rating: {info.review[0].rating}</p>
                 <p>Amenities: {amenities}</p>
@@ -169,7 +169,7 @@ function Map() {
               </div>) : (<div>
                 <h2>No Reviews for this Location</h2>
                 
-               <a href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
+               <a style={{itemAlign:"center"}} href={`/review/${selected.lat}wepoo${selected.lng}`}><button>Leave A Review</button></a>
               </div>)}
             </InfoWindow>): null}
         </GoogleMap>

@@ -8,9 +8,9 @@ export class ResponsivePlayer extends Component {
   render() {
     return (
       <div style={{paddingBottom:"60%"}}>
-      <Container style={{ height: "80%",marginTop: "2.5%",marginBottom: "5%", textAlign: "center", marginLeft: "0%"}}>
+      <Container style={{ height: "80%",marginTop: "1%",marginBottom: "5%", textAlign: "center", marginLeft: "0%"}}>
       <div className="player-wrapper">
-        <h4 style={{ textAlign: "center", fontFamily:"Londrina Solid", marginLeft:"" }}>Our Staff Picked Videos for When You Need to Go</h4>
+        <h4 style={{ fontFamily:'Noto Sans', padding: "5px", color:"#ffc107" }}>Fail Not on the Pot, but HERE</h4>
        <ReactPlayer
           className="react-player"
           url="https://music.youtube.com/playlist?list=PLeVSaoDO5bjYYxdHtKhBSpK9RvjMKWAWy"
