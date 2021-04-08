@@ -10,7 +10,7 @@ function Spotify (){
         <Row style={{ textAlign: "center" }}>
             <Col xs={10}>
             <div>
-            <h4 style={{ textAlign: "center", fontFamily:"Londrina Solid", marginLeft:"17%" }}>Our Staff Picked Playlists for When You Need to Go</h4>
+            <h4 style={{ textAlign: "center", fontFamily:"Londrina Solid", marginLeft:"17%" }}>Our Staff Picked Songs for When You Need to Go</h4>
             </div>
             </Col>
         </Row>
@@ -29,8 +29,7 @@ function Spotify (){
             <Col>
             <iframe src="https://open.spotify.com/embed/playlist/4wRmfPoD9bvkpFPPv6Kts4" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>            </Col>
             <Col>
-             <iframe src="https://open.spotify.com/embed/playlist/3Nmrj1LtDSzGHtdW3xRb6Y" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </Col>
+            <iframe src="https://open.spotify.com/embed/playlist/0D9BTVsJ6igLjFSdhGTeQL" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>            </Col>
            
         </Row>
         <br></br>
