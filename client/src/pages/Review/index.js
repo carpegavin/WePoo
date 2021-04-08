@@ -76,6 +76,7 @@ function Review() {
           publicRef.current.checked = false;
           singleAccRef.current.checked = false;
           femHyRef.current.checked = false;
+          alert("Your Review Has Been Saved")
  }
 
         )
@@ -84,8 +85,10 @@ function Review() {
     }
   }
 
-  function handleFormSubmitOld(){
-    API.newReview(id,{
+  function handleFormSubmitOld(event){
+    event.preventDefault();
+    if(ratingRef.current.value){
+      API.newReview(id,{
         reviewText:reviewRef.current.value,
         rating: ratingRef.current.value,
         handicapAccess: handiRef.current.checked,
@@ -103,12 +106,13 @@ function Review() {
       publicRef.current.checked = false;
       singleAccRef.current.checked = false;
       femHyRef.current.checked = false;
+      alert("Your Review Has Been Saved")
 }
 
     )
     .then(res => loadReviews())
     .catch(err => console.log(err));
-  }
+  }}
 
   if(reviews[0]){
     locationRef.current.value = reviews[0].locationName
