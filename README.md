@@ -2,7 +2,7 @@
 
 ## `Description`
 
-* Tossing a frisbee or whacking that shuttlecock in the park is difficult enough without having to p%ss like a racehorse. Don't let the game end, just put it on hold and use our simple and efficient app to quickly locate the nearest toilet using Google Maps. If you're as shy as sasquatch, we got you. When the juices are exploding', play music through our app to disguise your butt's echoey chaos. Planning on a long stay? Then entertain yourslef with Fail Army Youtube vids. Nothing like a drunk monkey falling of a horse to get things movin'. Finally, did you wanna barf out your nose 'cause the bathroom was so gross or did you feel like you could eat a charcuterie plate off the seat it was so clean, let others know with the review function.
+* Tossing a frisbee or whacking that shuttlecock in the park is difficult enough without having to pee like a racehorse. Don't let the game end, just put it on hold and use our simple and efficient app to quickly locate the nearest toilet using Google Maps. If you're as shy as sasquatch, we got you. When the juices are exploding', play music through our app to disguise your butt's echoey chaos. Planning on a long stay? Then entertain yourslef with Fail Army Youtube vids. Nothing like a drunk monkey falling of a horse to get things movin'. Finally, did you wanna barf out your nose 'cause the bathroom was so gross or did you feel like you could eat a charcuterie plate off the seat it was so clean, let others know with the review function.
 <br>
 
 ## `Technologies used`
