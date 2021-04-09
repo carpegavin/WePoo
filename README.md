@@ -3,7 +3,7 @@
 ## `Description`
 
 * Whacking that shuttlecock in the park or window shopping in Waco is difficult enough without having to pee like a racehorse. Don't let the game or antiquing end, just put it on hold and use our simple and efficient app to quickly locate the nearest toilet using Google Maps and just your thumb.
-If you're as shy as sasquatch on the seat, we got you. When the juices are rollin', play music through our app to disguise your butt's echoey chaos. Planning on maybe a long sit? Then entertain yourslef with Fail Army Youtube vids. Nothing like watching drunk monkey falling of a hang-gliding horse to get things movin'. Finally, did you almost barf out your nose 'cause the bathroom was so gross or did you entertain eating a charcuterie plate off the seat it was so clean, let others know with the review function.
+If you're as shy as sasquatch on the seat, we got you. When the juices are rollin', play music through our app to disguise your butt's echoey chaos. Planning on maybe a long sit? Then entertain yourslef with Fail Army Youtube vids. Nothing like watching a drunk monkey falling of a hang-gliding horse to get things movin'. Finally, did you almost barf out your nose 'cause the bathroom was so gross or did you entertain eating a charcuterie plate off the seat it was so clean, let others know with the review function.
 Never again squat like a savage in the bushes behind Taco Bell, salvage your feculent humanity and choose WePoo.
 <br>
 
