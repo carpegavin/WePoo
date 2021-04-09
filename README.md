@@ -30,7 +30,7 @@
 
 <br>
 
-![](gif here)
+![](https://github.com/carpegavin/WePoo/blob/main/client/public/assets/gif.gif?raw=true)
 
 
 ### `Questions?`
