@@ -11,6 +11,10 @@
   align-items: center !important;
 }
 
+button{
+    background-color: orange;
+}
+
 .reviewButt {
   text-align: center !important;
   margin-right: 10rem !important;

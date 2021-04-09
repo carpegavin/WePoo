@@ -10,7 +10,7 @@ function Spotify (){
         <Row style={{ textAlign: "center", color:"#ffc107"}}>
             <Col xs={10}>
             <div>
-            <h4 style={{ fontFamily:'Noto Sans', marginLeft:"17%", padding: "10px" }}>Hide not the Smell but Sound, HERE</h4>
+            <h4 style={{ fontFamily:'Noto Sans', marginLeft:"17%", padding: "10px" }}>Disguise the chaos with staff-picked songs</h4>
             </div>
             </Col>
         </Row>
