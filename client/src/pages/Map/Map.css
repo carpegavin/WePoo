@@ -1,25 +1,21 @@
-.InfoWindow{
-    background-color: #264653 !important;
-    color: yellow!important;
-    /* justify-content: center !important; */
-    font-size: 15px !important;
-    font-family: 'Noto Sans', sans-serif;
-    
-
+.InfoWindow {
+  background-color: #85cf2f !important;
+  color: black !important;
+  /* justify-content: center !important; */
+  font-size: 20px !important;
+  font-family: "Noto Sans";
+  border-radius:15px!important;
 }
 
-button{
-    background-color: yellow;
-    border-radius: 10px;
-}
-
-.justify-content-center{
-    align-items: center !important;
+.justify-content-center {
+  align-items: center !important;
 }
 
 .reviewButt {
-    text-align: center !important;
-    margin-right: 20rem !important;  
-    border-radius:20px!important;
+  text-align: center !important;
+  margin-right: 10rem !important;
+  border-radius: 10px !important;
+  background-color: orange!important;
+  height: 30px!important;
+  padding-bottom: 30px!important;
 }
-

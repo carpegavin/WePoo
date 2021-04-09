@@ -192,7 +192,7 @@ function Review() {
           <Form.Label>How'd it go?</Form.Label>
           <Form.Control ref = {reviewRef} as="textarea" rows={3} />
           {reviews[0]?(<button  
-            style={{ float: "right", margin: "10px" , backgroundColor:"#28A187", color:"#FFFFFF"}} 
+            style={{ float: "right", margin: "10px" , backgroundColor:"#28A187", color:"black"}} 
             className="btn"
             onClick = {handleFormSubmitOld}
           >Save New Review
