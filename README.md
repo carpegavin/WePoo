@@ -1,4 +1,4 @@
-# Project-3
+# WePoo
 
 ## `Description`
 
@@ -10,8 +10,7 @@
 * React.js
 * Node.JS
 * MongoDB
-* NoSQL
-* Materialize
+* Bootstrap
 * Javascript
 * HTML
 * CSS
@@ -19,7 +18,6 @@
 * GIT
 * GitHub
 * .ENV
-* Google Auth
 * Rapid API (and others)
 * Postman
 
