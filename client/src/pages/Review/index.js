@@ -214,9 +214,9 @@ function Review() {
 
       reviews[0].review.map(item=>(
       
-        <Card style={{margin:"12px", textAlign:"center"}}>
-          <Card.Header style={{backgroundColor:"#FFA500"}}>{reviews[0].locationName}</Card.Header>
-          <Card.Body>
+        <Card style={{margin:"12px", textAlign:"center", fontFamily: "Noto Sans"}}>
+          <Card.Header style={{backgroundColor:"#85cf2f", fontSize:"30px"}}>{reviews[0].locationName}</Card.Header>
+          <Card.Body style={{backgroundColor:"#98FB98"}}>
             <Card.Text>
               Rating: {item.rating}
             </Card.Text>
