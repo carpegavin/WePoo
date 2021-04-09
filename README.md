@@ -24,7 +24,7 @@
 * Postman
 
 
-### Please enjoy the deployed application [HERE](link here)
+### Please enjoy the deployed application [HERE](https://wepoo-app.herokuapp.com/)
 <br>
 
 ### `MIT License`
