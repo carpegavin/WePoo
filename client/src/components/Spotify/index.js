@@ -38,10 +38,10 @@ function Spotify (){
 
         <Row style={{ textAlign: "center" }}>
             <Col>
-            <iframe src="https://open.spotify.com/embed/album/5d3B7aEbk5qvssQvlmQXJZ" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>       
+            <iframe src="https://open.spotify.com/embed/album/5d3B7aEbk5qvssQvlmQXJZ" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>       
             </Col>
             <Col>
-            <iframe src="https://open.spotify.com/embed/playlist/65tdwZLDG2s2ozwMKt9xVL" width="120" height="120" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>        
+            <iframe src="https://open.spotify.com/embed/playlist/65tdwZLDG2s2ozwMKt9xVL" width="140" height="140" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>        
             </Col>
            
         </Row>
